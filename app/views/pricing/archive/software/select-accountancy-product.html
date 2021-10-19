@@ -1,0 +1,147 @@
+{% extends "layout_sme.html" %}
+
+{% block pageTitle %}
+  Terms and conditions and Privacy Consent
+{% endblock %}
+
+
+{% block beforeContent %}
+{% include "includes/phasebanner.html" %}
+<img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
+<p><a class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-0" href="select-software-category">Back</a></p>
+{% endblock %}
+
+{% block content %}
+
+  <div style="display:none" class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+    <h2 class="govuk-error-summary__title" id="error-summary-title">
+      There is a problem
+    </h2>
+    <div class="govuk-error-summary__body">
+      <ul class="govuk-list govuk-error-summary__list">
+        <li>
+          <a href="#select-product">Select the accounting software you want to buy</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="check-your-accountancy-answer" method="post">
+
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+
+            <div class="govuk-form-group">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <span class="govuk-caption-l">Section 1 of 4</span>
+                <h1 class="govuk-fieldset__heading">
+                  What accounting software do you want to buy?
+                </h1>
+              </legend>
+              <p class="govuk-body">Select one software product.</p>
+            </div>
+          </div>
+        </div>
+
+        <span style="display:none" id="select-product" class="govuk-error-message">
+          <span class="govuk-visually-hidden">Error:</span>Select the accounting software you want to buy
+        </span>
+
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full filter-table">
+
+            <table class="govuk-table">
+
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+
+                  <th scope="col" class="govuk-table__header">Name</th>
+                  <th scope="col" class="govuk-table__header">Price before discount</th>
+                  <th scope="col" class="govuk-table__header">Price after 50% discount</th>
+                  <th scope="col" class="govuk-table__header">Discount period</th>
+                  <th scope="col" class="govuk-table__header"></th>
+
+                </tr>
+              </thead>
+
+              <tbody class="govuk-table__body">
+
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Accounts of Monte Cristo</td>
+                  <td class="govuk-table__cell">£100</td>
+                  <td class="govuk-table__cell">£50</td>
+                  <td class="govuk-table__cell">Dec 2021 to Dec 2022</td>
+                  <td class="govuk-table__cell">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="product-name1" name="select-software" type="radio" value="Accounts of Monte Cristo">
+                    <label class="govuk-label govuk-radios__label" for="product-name1"><span class="govuk-visually-hidden">Accounts of Monte Cristo</span></label>
+                  </div>
+                </td>
+                </tr>
+
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Loyal Mint</td>
+                  <td class="govuk-table__cell">£100</td>
+                  <td class="govuk-table__cell">£50</td>
+                  <td class="govuk-table__cell">Jan 2021 to Mar 2022</td>
+                  <td class="govuk-table__cell">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="product-name2" name="select-software" type="radio" value="Loyal Mint">
+                    <label class="govuk-label govuk-radios__label" for="product-name2"><span class="govuk-visually-hidden">Loyal Mint</span></label>
+                  </div>
+                </td>
+                </tr>
+
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Budgetiser</td>
+                  <td class="govuk-table__cell">£100</td>
+                  <td class="govuk-table__cell">£50</td>
+                  <td class="govuk-table__cell">Jan 2021 to Mar 2022</td>
+                  <td class="govuk-table__cell">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="product-name3" name="select-software" type="radio" value="Budgetiser">
+                    <label class="govuk-label govuk-radios__label" for="product-name3"><span class="govuk-visually-hidden">Budgetiser</span></label>
+                  </div>
+                </td>
+                </tr>
+
+
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Monify</td>
+                  <td class="govuk-table__cell">£100</td>
+                  <td class="govuk-table__cell">£50</td>
+                  <td class="govuk-table__cell">Jan 2021 to Mar 2022</td>
+                  <td class="govuk-table__cell">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="product-name3" name="select-software" type="radio" value="Monify">
+                      <label class="govuk-label govuk-radios__label" for="product-name3"><span class="govuk-visually-hidden">Monify</span></label>
+                      </div>
+                  </td>
+                  </tr>
+
+              </tbody>
+            </table>
+
+
+        </div>
+      </div>
+
+
+        <button class="govuk-button account-software" data-module="govuk-button">
+          Select and continue
+        </button>
+
+      </form>
+
+
+
+    </div>
+
+
+  </div>
+
+{% endblock %}

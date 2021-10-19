@@ -1,0 +1,71 @@
+{% extends "layout_sme.html" %}
+
+{% block pageTitle %}
+  Check your answers
+{% endblock %}
+
+{% block beforeContent %}
+{% include "includes/phasebanner.html" %}
+<img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
+<p><a class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-0" href="javascript:history.go(-1)">Back</a></p>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      <span class="govuk-caption-l">Section 1 of 4</span>
+      <h1 class="govuk-heading-l">Confirm this is the software you want to buy</h1>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Software name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['select-software'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="select-accountancy-software">
+              Change
+              <span class="govuk-visually-hidden">Software product</span>
+            </a>
+          </dd>
+        </div>
+
+
+      </dl>
+
+      <table class="govuk-table govuk-!-margin-bottom-9">
+        <caption class="govuk-table__caption govuk-table__caption--m">Discount details</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Price before discount</th>
+            <th scope="col" class="govuk-table__header">Price after discount</th>
+            <th scope="col" class="govuk-table__header">Discount period</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">£100</td>
+            <td class="govuk-table__cell">£50</td>
+            <td class="govuk-table__cell">Dec 2021 to Dec 2022</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <form action="new-to-software" method="post" novalidate>
+
+        <input type="hidden" name="answers-checked" value="true">
+
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Confirm and continue
+        </button>
+
+      </form>
+
+    </div>
+
+
+  </div>
+{% endblock %}

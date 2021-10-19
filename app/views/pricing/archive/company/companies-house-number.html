@@ -1,0 +1,55 @@
+{% extends "layout_sme.html" %}
+
+{% block pageTitle %}
+  Companies House number
+{% endblock %}
+
+{% block beforeContent %}
+{% include "includes/phasebanner.html" %}
+<img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
+<p><a class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-0" href="companies-house-question">Back</a></p>
+{% endblock %}
+
+{% block content %}
+
+  <div style="display:none" class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+    <h2 class="govuk-error-summary__title" id="error-summary-title">
+      There is a problem
+    </h2>
+    <div class="govuk-error-summary__body">
+      <ul class="govuk-list govuk-error-summary__list">
+        <li>
+          <a href="#company-house-number">Enter the Companies House number</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <form class="form" action="check-company-details" method="post" novalidate>
+
+          <div class="govuk-form-group">
+            <span class="govuk-caption-l">Section 2 of 4</span>
+            <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="companies-house-number">
+                What is the Companies House number?
+              </label>
+            </h1>
+            <div id="co-number-hint" class="govuk-hint">For example, 12345678</div>
+            <span style="display:none" id="company-number" class="govuk-error-message">
+              <span class="govuk-visually-hidden">Error:</span>Enter the Companies House number
+            </span>
+            <input class="govuk-input" id="companies-house-number" name="companies-house-number" type="text" maxlength="8" pattern="[0-9]*" inputmode="numeric" aria-describedby="co-number-hint">
+          </div>
+
+          <button class="govuk-button company-house-number" data-module="govuk-button">Continue</button>
+
+        </form>
+
+    </div>
+
+
+  </div>
+
+{% endblock %}

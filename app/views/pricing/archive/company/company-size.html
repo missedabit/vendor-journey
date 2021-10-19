@@ -1,0 +1,77 @@
+{% extends "layout_sme.html" %}
+
+{% block pageTitle %}
+  Company size
+{% endblock %}
+
+{% block beforeContent %}
+{% include "includes/phasebanner.html" %}
+<img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
+<p><a class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-0" href="javascript:history.go(-1)">Back</a></p>
+{% endblock %}
+
+{% block content %}
+
+
+  <div style="display:none" class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+    <h2 class="govuk-error-summary__title" id="error-summary-title">
+      There is a problem
+    </h2>
+    <div class="govuk-error-summary__body">
+      <ul class="govuk-list govuk-error-summary__list">
+        <li>
+          <a href="#company-size">Select yes if the business employs between 5 and 249 people</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/sme-v3/company-size-answer" method="post">
+
+        <div class="govuk-form-group">
+          <span class="govuk-caption-l">Section 2 of 4</span>
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                Does the business employ between 5 and 249 people?
+            </legend>
+
+            <p class="govuk-body">
+              To be eligible for the scheme the business must have between 5 and 249 employees, or full time equivalents.
+            </p>
+
+            <span style="display:none" id="company-size" class="govuk-error-message">
+              <span class="govuk-visually-hidden">Error:</span>Select yes if the business employs between 5 and 249 people
+            </span>
+
+            <div class="govuk-radios govuk-radios--inline">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="company-size-1" name="company-size" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="company-size-1">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="company-size-2" name="company-size" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="company-size-2">
+                  No
+                </label>
+              </div>
+            </div>
+
+          </fieldset>
+        </div>
+
+        <button class="govuk-button company-size" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+
+
+  </div>
+
+{% endblock %}

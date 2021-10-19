@@ -1,0 +1,53 @@
+{% extends "layout_sme.html" %}
+
+{% block pageTitle %}
+Help to Grow: Digital
+{% endblock %}
+
+{% block beforeContent %}
+<img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
+<p><a class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-0" href="">Back</a></p>
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+        <form class="form" action="discount-additional" method="post">
+
+            
+            <span class="govuk-caption-l">Section 4 of 5</span>
+
+
+              <div class="govuk-character-count" data-module="govuk-character-count" data-maxwords="150">
+                <div class="govuk-form-group">
+                  <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="word-count">
+                    What is the value of the discount?
+                    </label>
+                  </h1>
+                  <div id="with-hint-hint" class="govuk-hint">
+                    Describe the discount.
+                   </div>
+                  <textarea class="govuk-textarea govuk-js-character-count" id="word-count" name="word-count" rows="10" aria-describedby="word-count-info"></textarea>
+                </div>
+              
+                <div id="word-count-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+                  You can enter up to 150 words
+                </div>
+              
+              </div>
+
+
+             <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+        </form>
+
+    </div>
+
+
+  </div>
+
+{% endblock %}

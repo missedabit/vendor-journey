@@ -1,0 +1,54 @@
+{% extends "layout_sme.html" %}
+
+{% block pageTitle %}
+  Confirmation page example
+{% endblock %}
+
+{% block beforeContent %}
+<img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
+<p><a class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-0" href="add-ons">Back</a></p>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <div class="govuk-panel govuk-panel--confirmation">
+        <h1 class="govuk-panel__title">Your business is not eligible for the scheme</h1>
+
+        <div class="govuk-panel__body">
+        <!--  Your reference number<br><strong>HDJ2123F</strong>-->
+        </div>
+
+      </div>
+      <br>
+      <p>
+        Your business is not eligible to buy <strong>{{ data['select-software'] }}</strong> as part of the Help to Grow: Digital software discount scheme.
+      </p>
+
+      <p>
+        This is because the software
+      </p>
+
+      <h2 class="govuk-heading-m">Appeal</h2>
+
+      <p>Lorem ipsum.</p>
+
+      <h2 class="govuk-heading-m">Register your support</h2>
+
+      <p>Lorem ipsum.</p>
+
+      <h2 class="govuk-heading-m">Visit the Learning Platform</h2>
+
+      <p>Lorem ipsum.</p>
+
+      <!--
+      <p><a href="https://www.gov.uk/service-manual/user-centred-design/resources/patterns/feedback-pages.html">What did you think of this service?</a> (takes 30 seconds)</p>
+      -->
+
+    </div>
+  </div>
+
+{% endblock %}

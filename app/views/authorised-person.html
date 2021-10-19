@@ -1,0 +1,33 @@
+{% extends "layout_sme.html" %}
+
+{% block pageTitle %}
+  Authorised person
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="../check-eligibility/company-elligible">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Are you an authorised person of the company?</h1>
+      <p class="govuk-body">Buying software through Help to Grow Digital can only be made by a authorised person of the company. Checks maybe carried out to verify this at a later stage.</p>
+
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive">Warning</span>
+          Continue only if you are an authorised person of the company.
+        </strong>
+      </div>
+
+      <form class="form" action="../get-token/work-email" method="get">
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

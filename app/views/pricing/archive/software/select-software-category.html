@@ -1,0 +1,82 @@
+{% extends "layout_sme.html" %}
+
+{% block pageTitle %}
+  Product list
+{% endblock %}
+
+{% block beforeContent %}
+{% include "includes/phasebanner.html" %}
+<img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
+<p><a class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-0" href="../start-page">Back</a></p>
+{% endblock %}
+
+{% block content %}
+
+  <div style="display:none" class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+    <h2 class="govuk-error-summary__title" id="error-summary-title">
+      There is a problem
+    </h2>
+    <div class="govuk-error-summary__body">
+      <ul class="govuk-list govuk-error-summary__list">
+        <li>
+          <a href="#select-software-category">Select the type of business software you want to buy</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <form class="form" action="/sme-v3/select-software-category-answer" method="post">
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <span class="govuk-caption-l">Section 1 of 4</span>
+                <h1 class="govuk-fieldset__heading">
+                  What type of business software do you want to buy?
+                </h1>
+              </legend>
+              <div id="software-category-hint" class="govuk-hint">
+                  Select one option.
+              </div>
+              <span style="display:none" id="select-software-category" class="govuk-error-message">
+                <span class="govuk-visually-hidden">Error:</span>Select the type of business software you want to buy
+              </span>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="select-software-category-1" name="select-software-category" type="radio" value="Accounting">
+                <label class="govuk-label govuk-radios__label" for="select-software-category-1">
+                  Accounting
+                </label>
+              </div>
+              <div class="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="select-software-category-2" name="select-software-category" type="radio" value="customer relationship management">
+                  <label class="govuk-label govuk-radios__label" for="select-software-category-2">
+                    Customer relationship management (CRM)
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="select-software-category-3" name="select-software-category" type="radio" value="eCommerce">
+                  <label class="govuk-label govuk-radios__label" for="select-software-category-3">
+                    E-commerce
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <button class="govuk-button select-software-category" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+
+
+  </div>
+
+
+
+{% endblock %}

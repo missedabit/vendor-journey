@@ -1,0 +1,57 @@
+{% extends "layout_sme.html" %}
+
+{% block pageTitle %}
+  Confirm work email
+{% endblock %}
+
+{% block beforeContent %}
+{% include "includes/phasebanner.html" %}
+<img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
+<p><a class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-0" href="../company/check-company-details">Back</a></p>
+{% endblock %}
+
+{% block content %}
+
+  <div style="display:none" class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+    <h2 class="govuk-error-summary__title" id="error-summary-title">
+      There is a problem
+    </h2>
+    <div class="govuk-error-summary__body">
+      <ul class="govuk-list govuk-error-summary__list">
+        <li>
+          <a href="#applicant-name">Enter your full name</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <form class="form" action="role" method="post">
+
+        <div class="govuk-form-group">
+          <span class="govuk-caption-l">Section 3 of 4</span>
+          <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="applicant-name">
+            What is your name?
+            </label></h1>
+
+          <div id="applicant-name-hint" class="govuk-hint"> Full name</div>
+          <span style="display:none" id="applicant-name" class="govuk-error-message">
+            <span class="govuk-visually-hidden">Error:</span>Enter your full name
+          </span>
+          <input class="govuk-input" id="applicant-name-1" name="applicant-name" type="text" spellcheck="false" autocomplete="name" aria-describedby="applicant-name-hint">
+
+        </div>
+
+        <button class="govuk-button applicant-name" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+{% endblock %}

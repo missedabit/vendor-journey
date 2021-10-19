@@ -1,0 +1,194 @@
+{% extends "layout_sme.html" %}
+
+{% block pageTitle %}
+  Product list
+{% endblock %}
+
+{% block beforeContent %}
+{% include "includes/phasebanner.html" %}
+<img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
+<p><a class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-0" href="select-software-category">Back</a></p>
+{% endblock %}
+
+{% block content %}
+
+  <div style="display:none" class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+    <h2 class="govuk-error-summary__title" id="error-summary-title">
+      There is a problem
+    </h2>
+    <div class="govuk-error-summary__body">
+      <ul class="govuk-list govuk-error-summary__list">
+        <li>
+          <a href="#account-software">Select the accounting software you want to buy</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <form class="form" action="check-your-accountancy-answer" method="post">
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <span class="govuk-caption-l">Section 1 of 4</span>
+                <h1 class="govuk-fieldset__heading">
+                  What accounting software do you want to buy?
+                </h1>
+              </legend>
+              <div id="crm-software-hint" class="govuk-hint">
+                  Select one software product.
+              </div>
+              <span style="display:none" id="account-software" class="govuk-error-message">
+                <span class="govuk-visually-hidden">Error:</span>Select the accounting software you want to buy
+              </span>
+              <div class="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="select-software-1" name="select-software" type="radio" value="Accounts of Monte Cristo">
+                  <label class="govuk-label govuk-radios__label" for="select-software-1">
+                    Accounts of Monte Cristo
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="select-software-2" name="select-software" type="radio" value="Cashoo">
+                  <label class="govuk-label govuk-radios__label" for="select-software-2">
+                    Cashoo
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="select-software-3" name="select-software" type="radio" value="Centinel">
+                  <label class="govuk-label govuk-radios__label" for="select-software-3">
+                    Centinel
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="select-software-4" name="select-software" type="radio" value="DeNiro">
+                  <label class="govuk-label govuk-radios__label" for="select-software-4">
+                    DiNero
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="select-software-5" name="select-software" type="radio" value="ElemEntry bookkeeing">
+                  <label class="govuk-label govuk-radios__label" for="select-software-5">
+                    ElemEntry bookkeeing
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="select-software-6" name="select-software" type="radio" value="Funancier">
+                  <label class="govuk-label govuk-radios__label" for="select-software-6">
+                    Funancier
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="select-software-7" name="select-software" type="radio" value="Ledgend">
+                  <label class="govuk-label govuk-radios__label" for="select-software-7">
+                    Ledgend
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="select-software-8" name="select-software" type="radio" value="Loyal Mint">
+                  <label class="govuk-label govuk-radios__label" for="select-software-8">
+                    Loyal Mint
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="select-software-9" name="select-software" type="radio" value="Monetee">
+                  <label class="govuk-label govuk-radios__label" for="select-software-9">
+                    Monetee
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="select-software-10" name="select-software" type="radio" value="Moneytaur">
+                  <label class="govuk-label govuk-radios__label" for="select-software-10">
+                    Moneytaur
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="select-software-11" name="select-software" type="radio" value="MoneyTree">
+                  <label class="govuk-label govuk-radios__label" for="select-software-11">
+                    MoneyTree
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="select-software-12" name="select-software" type="radio" value="More Wonga">
+                  <label class="govuk-label govuk-radios__label" for="select-software-12">
+                    More Wonga
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="select-software-13" name="select-software" type="radio" value="Moula Rouge">
+                  <label class="govuk-label govuk-radios__label" for="select-software-13">
+                    Moulah Rouge
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="select-software-14" name="select-software" type="radio" value="Must Stash">
+                  <label class="govuk-label govuk-radios__label" for="select-software-14">
+                    Must Stash
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="select-software-15" name="select-software" type="radio" value="Parsley, Rosemary and Thyme (PRT)">
+                  <label class="govuk-label govuk-radios__label" for="select-software-15">
+                    Parsley, Rosemary and Thyme (PRT)
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="select-software-16" name="select-software" type="radio" value="Pursiful">
+                  <label class="govuk-label govuk-radios__label" for="select-software-16">
+                    Pursiful
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="select-software-17" name="select-software" type="radio" value="Quids">
+                  <label class="govuk-label govuk-radios__label" for="select-software-17">
+                    Quids
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="select-software-18" name="select-software" type="radio" value="Quids Pro">
+                  <label class="govuk-label govuk-radios__label" for="select-software-18">
+                    Quids Pro
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="select-software-19" name="select-software" type="radio" value="Quids Pro: Dough">
+                  <label class="govuk-label govuk-radios__label" for="select-software-19">
+                    Quids Pro: Dough
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="select-software-20" name="select-software" type="radio" value="SafePenny">
+                  <label class="govuk-label govuk-radios__label" for="select-software-20">
+                    SafePenny
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="select-software-21" name="select-software" type="radio" value="Slick Books">
+                  <label class="govuk-label govuk-radios__label" for="select-software-21">
+                    Slick Books
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="select-software-22" name="select-software" type="radio" value="Steady Readies">
+                  <label class="govuk-label govuk-radios__label" for="select-software-22">
+                    Steady Readies
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <button class="govuk-button account-software" data-module="govuk-button">Continue</button>
+
+        </form>
+
+    </div>
+
+
+  </div>
+
+{% endblock %}

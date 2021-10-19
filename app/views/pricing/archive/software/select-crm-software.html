@@ -1,0 +1,123 @@
+{% extends "layout_sme.html" %}
+
+{% block pageTitle %}
+  Product list
+{% endblock %}
+
+{% block beforeContent %}
+{% include "includes/phasebanner.html" %}
+<img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
+<p><a class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-0" href="select-software-category">Back</a></p>
+{% endblock %}
+
+{% block content %}
+
+  <div style="display:none" class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+    <h2 class="govuk-error-summary__title" id="error-summary-title">
+      There is a problem
+    </h2>
+    <div class="govuk-error-summary__body">
+      <ul class="govuk-list govuk-error-summary__list">
+        <li>
+          <a href="#select-crm-software">Select the {{ data['select-software-category'] }} software you want to buy</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <form class="form" action="check-your-crm-answer" method="post">
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <span class="govuk-caption-l">Section 1 of 4</span>
+                <h1 class="govuk-fieldset__heading">
+                  What {{ data['select-software-category'] }} software do you want to buy?
+                </h1>
+              </legend>
+              <div id="crm-software-hint" class="govuk-hint">
+                  Select one software product.
+              </div>
+              <span style="display:none" id="select-crm-software" class="govuk-error-message">
+                <span class="govuk-visually-hidden">Error:</span>Select the {{ data['select-software-category'] }} software you want to buy
+              </span>
+              <div class="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="select-software-1" name="select-software" type="radio" value="Boughtical">
+                  <label class="govuk-label govuk-radios__label" for="select-software-1">
+                    Boughtical
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="select-software-2" name="select-software" type="radio" value="Buyrate">
+                  <label class="govuk-label govuk-radios__label" for="select-software-2">
+                    Buyrate
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="select-software-3" name="select-software" type="radio" value="Cliensell">
+                  <label class="govuk-label govuk-radios__label" for="select-software-3">
+                    Cliensell
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="select-software-4" name="select-software" type="radio" value="Costomer">
+                  <label class="govuk-label govuk-radios__label" for="select-software-4">
+                    Costomer
+                  </label>
+                </div>
+                <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="select-software-5" name="select-software" type="radio" value="Countselling">
+                    <label class="govuk-label govuk-radios__label" for="select-software-5">
+                      Countselling
+                    </label>
+                  </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="select-software-6" name="select-software" type="radio" value="Customizer">
+                  <label class="govuk-label govuk-radios__label" for="select-software-6">
+                    Customizer
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="select-software-7" name="select-software" type="radio" value="Go Shoperative">
+                  <label class="govuk-label govuk-radios__label" for="select-software-7">
+                    Go Shoperative
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="select-software-8" name="select-software" type="radio" value="Salesforge">
+                  <label class="govuk-label govuk-radios__label" for="select-software-8">
+                    Salesforge
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="select-software-9" name="select-software" type="radio" value="Sellery">
+                  <label class="govuk-label govuk-radios__label" for="select-software-9">
+                    Sellery
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="select-software-10" name="select-software" type="radio" value="Shopportunity">
+                  <label class="govuk-label govuk-radios__label" for="select-software-10">
+                    Shopportunity
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+
+        <button class="govuk-button select-crm-software" data-module="govuk-button">Continue</button>
+      </form>
+
+    </div>
+
+
+  </div>
+
+{% endblock %}

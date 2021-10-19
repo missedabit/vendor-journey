@@ -1,0 +1,42 @@
+{% extends "layout_sme.html" %}
+
+{% block pageTitle %}
+  Token Issued
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-panel govuk-panel--confirmation">
+
+        <h1 class="govuk-panel__title">Your application has been successful</h1>
+        <div class="govuk-panel__body">
+          <div class="govuk-!-font-size-27">
+          Your software purchase link is:
+          </div>
+          <a href="#" class="govuk-link govuk-link--inverse govuk-!-font-size-24"><strong>Help to Grow: Digital discount</strong></a>
+        </div>
+
+      </div>
+
+      <p class="govuk-body">We have also sent your software purchase link for <strong>{{ data['select-software'] }}</strong> to: <strong>{{ data['email'] }}</strong></p>
+
+      <h2 class="govuk-heading-m">What you need to do next</h2>
+
+      <ol class="govuk-list govuk-list--number">
+        <li>Follow the link, which will take you to the software vendor website.</li>
+        <li>Check that the software product and Help to Grow: Digital discount are correct.</li>
+        <li>Complete your purchase.</li>
+      </ol>
+
+    </div>
+
+
+
+
+
+  </div>
+
+{% endblock %}
