@@ -1,0 +1,48 @@
+{% extends "layout_sme.html" %}
+
+{% block pageTitle %}
+Help to Grow: Digital
+{% endblock %}
+
+{% block beforeContent %}
+<img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
+<p><a class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-0" href="">Back</a></p>
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+        <form class="form" action="metric-records" method="post">
+
+            
+            <span class="govuk-caption-l">Section 1 of 5</span>
+
+          
+
+            <h1 class="govuk-heading-l">Number of integrated bank accounts</h1>
+
+
+
+
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="max-width-5">
+                    What is your number of integrated bank accounts?
+                </label>
+                <input class="govuk-input govuk-input--width-5" id="max-width-5" name="max-width-5" type="text">
+            </div>
+
+
+          <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+        </form>
+
+    </div>
+
+
+  </div>
+
+{% endblock %}
