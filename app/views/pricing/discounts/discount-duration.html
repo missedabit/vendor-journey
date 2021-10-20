@@ -21,13 +21,41 @@ Help to Grow: Digital
             
             <span class="govuk-caption-l">Section 4 of 5</span>
 
-            <div class="govuk-form-group">
-                <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="event-name">
-                    How long is the discount duration for?
-                  </label>
-                </h1>
-                <input class="govuk-input govuk-input--width-10" id="duration-period" name="duration-period" type="text">
+
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" role="group" aria-describedby="discount-issued-hint">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                    <h1 class="govuk-fieldset__heading">
+                      How long is the discount duration for?
+                    </h1>
+                  </legend>
+
+                  <div class="govuk-date-input" id="discount-issued">
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="discount-issued-day">
+                          Days
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-5" id="discount-issued-day" name="discount-issued-day" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                    </div>
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="discount-issued-month">
+                          Months
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-5" id="discount-issued-month" name="discount-issued-month" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                    </div>
+
+                  </div>
+              
+                </fieldset>
               </div>
+
+
+
+
+
+
 
           <button class="govuk-button" data-module="govuk-button">Continue</button>
 
