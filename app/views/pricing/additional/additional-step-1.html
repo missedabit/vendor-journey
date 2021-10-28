@@ -1,4 +1,4 @@
-{% extends "layout_sme.html" %}
+{% extends "layout_vendor_account_management.html" %}
 
 {% block pageTitle %}
 Help to Grow: Digital
@@ -6,7 +6,7 @@ Help to Grow: Digital
 
 {% block beforeContent %}
 <img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
-<p><a class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-0" href="../pricing-url">Back</a></p>
+<p><a class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-0" href="#" onclick="history.go(-1); return false;" >Back</a></p>
 {% endblock %}
 
 {% block content %}
@@ -16,70 +16,29 @@ Help to Grow: Digital
     <div class="govuk-grid-column-two-thirds">
 
 
-        <form class="form" action="/pricing/additional/additional-step-1-answer" method="post">
+        <form class="form" action="/vendor-account-management/product-details/pricing/additional-step-1-answer" method="post">
 
           <div class="govuk-form-group">
             <fieldset class="govuk-fieldset">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                <span class="govuk-caption-l">Section 5 of 5</span>
+                <span class="govuk-caption-l">AccountingSoft Pro: Additional costs</span>
                 <h1 class="govuk-fieldset__heading">
-                  What type of additional costs will ther be?
+                  Does [software name] have additional costs?
                 </h1>
               </legend>
-              <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+              <div class="govuk-radios govuk-radios--inline">
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="additional-period-1" name="additional-period" type="radio" value="onboarding">
-                  <label class="govuk-label govuk-radios__label" for="additional-period-1">
-                    Set-up and onboarding 
+                  <input class="govuk-radios__input" id="additional-step-1" name="additional-step" type="radio" value="yes">
+                  <label class="govuk-label govuk-radios__label" for="additional-step-1">
+                    Yes
                   </label>
                 </div>
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="additional-period-2" name="additional-period" type="radio" value="Implementation ">
-                  <label class="govuk-label govuk-radios__label" for="additional-period-2">
-                    Implementation 
+                  <input class="govuk-radios__input" id="additional-step-2" name="additional-step" type="radio" value="no">
+                  <label class="govuk-label govuk-radios__label" for="additional-step-2">
+                    No
                   </label>
                 </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="additional-period-3" name="additional-period" type="radio" value="Training">
-                  <label class="govuk-label govuk-radios__label" for="additional-period-3">
-                    Training
-                  </label>
-                </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="additional-period-4" name="additional-period" type="radio" value="Support">
-                  <label class="govuk-label govuk-radios__label" for="additional-period-4">
-                    Support
-                  </label>
-                </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="additional-period-5" name="additional-period" type="radio" value="Infrastructure ">
-                  <label class="govuk-label govuk-radios__label" for="additional-period-5">
-                    Infrastructure 
-                  </label>
-                </div>
-
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="additional-period-6" name="additional-period" type="radio" value="Account management ">
-                  <label class="govuk-label govuk-radios__label" for="additional-period-6">
-                    Account management 
-                  </label>
-                </div>
-
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="additional-period-7" name="additional-period" type="radio" value="other" data-aria-controls="other-org">
-                  <label class="govuk-label govuk-radios__label" for="additional-period-7">
-                    Other
-                  </label>
-                </div>
-
-                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="other-org">
-                  <div class="govuk-form-group">
-                    <label class="govuk-label" for="additional-period-8">
-                      If 'Other' give details
-                    </label>
-                    <input class="govuk-input govuk-input--width-20" id="additional-period-8" name="additional-period" type="additional-period-8" spellcheck="false" autocomplete="other"></div>
-                </div>
-
               </div>
             </fieldset>
           </div>

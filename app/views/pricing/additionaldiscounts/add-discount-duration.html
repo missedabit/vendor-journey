@@ -1,0 +1,72 @@
+{% extends "layout_vendor_account_management.html" %}
+
+{% block pageTitle %}
+Help to Grow: Digital
+{% endblock %}
+
+{% block beforeContent %}
+<img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
+<p><a class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-0" href="#" onclick="history.go(-1); return false;" >Back</a></p>
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+        <form class="form" action="add-discount-value" method="post">
+
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <span class="govuk-caption-l">AccountingSoft Pro: Additional discounts</span>
+                  <h1 class="govuk-fieldset__heading">
+                    What is the contract duration?
+                  </h1>
+                </legend>
+                <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="add-discount-duration-1" name="add-discount-duration" type="radio" value="Days">
+                    <label class="govuk-label govuk-radios__label" for="add-discount-duration-1">
+                      Days
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="add-discount-duration-2" name="add-discount-duration" type="radio" value="Weeks">
+                    <label class="govuk-label govuk-radios__label" for="add-discount-duration-2">
+                      Weeks
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="add-discount-duration-3" name="add-discount-duration" type="radio" value="Months">
+                    <label class="govuk-label govuk-radios__label" for="add-discount-duration-3">
+                      Months
+                    </label>
+                  </div>
+
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="add-discount-duration-4" name="add-discount-duration" type="radio" value="Years">
+                    <label class="govuk-label govuk-radios__label" for="add-discount-duration-4">
+                      Years
+                    </label>
+                  </div>
+
+
+                </div>
+              </fieldset>
+            </div>
+
+
+            <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+        </form>
+
+    </div>
+
+
+  </div>
+
+{% endblock %}

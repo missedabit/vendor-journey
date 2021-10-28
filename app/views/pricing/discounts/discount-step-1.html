@@ -1,4 +1,4 @@
-{% extends "layout_sme.html" %}
+{% extends "layout_vendor_account_management.html" %}
 
 {% block pageTitle %}
 Help to Grow: Digital
@@ -6,7 +6,7 @@ Help to Grow: Digital
 
 {% block beforeContent %}
 <img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
-<p><a class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-0" href="../pricing-url">Back</a></p>
+<p><a class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-0" href="#" onclick="history.go(-1); return false;" >Back</a></p>
 {% endblock %}
 
 {% block content %}
@@ -16,14 +16,14 @@ Help to Grow: Digital
     <div class="govuk-grid-column-two-thirds">
 
 
-        <form class="form" action="/pricing/discount-step-1-answer" method="post">
+        <form class="form" action="/vendor-account-management/product-details/pricing/discount-step-1-answer" method="post">
 
           <div class="govuk-form-group">
             <fieldset class="govuk-fieldset">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                <span class="govuk-caption-l">Section 4 of 5</span>
+                <span class="govuk-caption-l">AccountingSoft Pro: Discount period</span>
                 <h1 class="govuk-fieldset__heading">
-                  Do you have a discount period?
+                  Does [software name] have a discount period?
                 </h1>
               </legend>
               <div class="govuk-radios govuk-radios--inline">

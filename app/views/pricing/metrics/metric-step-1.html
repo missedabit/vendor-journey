@@ -1,4 +1,4 @@
-{% extends "layout_sme.html" %}
+{% extends "layout_vendor_account_management.html" %}
 
 {% block pageTitle %}
 Help to Grow: Digital
@@ -6,7 +6,7 @@ Help to Grow: Digital
 
 {% block beforeContent %}
 <img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
-<p><a class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-0" href="../pricing-url">Back</a></p>
+<p><a class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-0" href="#" onclick="history.go(-1); return false;" >Back</a></p>
 {% endblock %}
 
 {% block content %}
@@ -16,14 +16,12 @@ Help to Grow: Digital
     <div class="govuk-grid-column-two-thirds">
 
 
-        <form class="form" action="metric-step-1-value" method="post">
-
           <div class="govuk-form-group">
             <fieldset class="govuk-fieldset">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                <span class="govuk-caption-l">Section 1 of 5</span>
+                <span class="govuk-caption-l">AccountingSoft Pro: Pricing metrics step 1</span>
                 <h1 class="govuk-fieldset__heading">
-                  What type of payment is it?
+                  How do customers pay for AccountingSoft Pro?
                 </h1>
               </legend>
 
@@ -31,7 +29,7 @@ Help to Grow: Digital
                 <div class="govuk-radios__item">
                   <input class="govuk-radios__input" id="payment-type-1" name="payment-type" type="radio" value="payment1">
                   <label class="govuk-label govuk-radios__label" for="payment-type-1">
-                    One time payment (unlimited users - perpetual)
+                    One time payment - unlimited users (perpetual)
                   </label>
                 </div>
 
@@ -45,67 +43,67 @@ Help to Grow: Digital
                 <div class="govuk-radios__item">
                   <input class="govuk-radios__input" id="payment-type-3" name="payment-type" type="radio" value="payment3">
                   <label class="govuk-label govuk-radios__label" for="payment-type-3">
-                    One time payment fixed number of users
+                    One time payment - fixed number of users
                   </label>
-                </div> 
-                
+                </div>
+
                 <div class="govuk-radios__item">
                   <input class="govuk-radios__input" id="payment-type-4" name="payment-type" type="radio" value="payment4">
                   <label class="govuk-label govuk-radios__label" for="payment-type-4">
-                    Annual support fixed number of users
+                    Annual support - fixed number of users
                   </label>
-                </div> 
+                </div>
 
                 <div class="govuk-radios__item">
                   <input class="govuk-radios__input" id="payment-type-5" name="payment-type" type="radio" value="payment5">
                   <label class="govuk-label govuk-radios__label" for="payment-type-5">
                     One time cost per additional user
                   </label>
-                </div> 
+                </div>
 
                 <div class="govuk-radios__item">
                   <input class="govuk-radios__input" id="payment-type-6" name="payment-type" type="radio" value="payment6">
                   <label class="govuk-label govuk-radios__label" for="payment-type-6">
-                   One time cost per user (concurrent) 
+                   One time cost per user (concurrent)
                   </label>
-                </div> 
-                
+                </div>
+
                 <div class="govuk-radios__item">
                   <input class="govuk-radios__input" id="payment-type-7" name="payment-type" type="radio" value="payment7">
                   <label class="govuk-label govuk-radios__label" for="payment-type-7">
-                    Per user per month
+                    Cost per user per month
                   </label>
-                </div>  
-                
+                </div>
+
                 <div class="govuk-radios__item">
                   <input class="govuk-radios__input" id="payment-type-8" name="payment-type" type="radio" value="payment8">
                   <label class="govuk-label govuk-radios__label" for="payment-type-8">
                     Unlimited users per month
                   </label>
-                </div>  
+                </div>
 
                 <div class="govuk-radios__item">
                   <input class="govuk-radios__input" id="payment-type-9" name="payment-type" type="radio" value="payment9">
                   <label class="govuk-label govuk-radios__label" for="payment-type-9">
                     Fixed number of users per month
                   </label>
-                </div>  
+                </div>
 
 
                 <div class="govuk-radios__item">
                   <input class="govuk-radios__input" id="payment-type-10" name="payment-type" type="radio" value="payment10">
                   <label class="govuk-label govuk-radios__label" for="payment-type-10">
-                    monthly platform
+                    Monthly platform
                   </label>
-                </div> 
+                </div>
 
 
                 <div class="govuk-radios__item">
                   <input class="govuk-radios__input" id="payment-type-11" name="payment-type" type="radio" value="monthly">
                   <label class="govuk-label govuk-radios__label" for="payment-type-11">
-                    Per month per additional user
+                    Additional user per month
                   </label>
-                </div> 
+                </div>
 
               </div>
             </fieldset>
@@ -113,11 +111,72 @@ Help to Grow: Digital
 
           <button class="govuk-button" data-module="govuk-button">Continue</button>
 
-        </form>
+
 
     </div>
-
-
   </div>
+
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.js"  crossorigin="anonymous"></script>
+
+  <script type="text/javascript">
+
+    $( document ).ready(function() {
+
+      $('.govuk-button').click(function (e) {
+
+          if ($('#payment-type-1').is(':checked')) {
+            window.location.href = 'metric-step-1-value';
+          }
+          else if ($('#payment-type-2').is(':checked')) {
+            window.location.href = 'metric-step-1-valuev1';
+          }
+          else if ($('#payment-type-3').is(':checked')) {
+            window.location.href = 'metric-step-1-valuev2';
+          }
+          else if ($('#payment-type-4').is(':checked')) {
+            window.location.href = 'metric-step-1-valuev2';
+          }
+          else if ($('#payment-type-5').is(':checked')) {
+            window.location.href = 'metric-step-1-value';
+          }
+          else if ($('#payment-type-6').is(':checked')) {
+            window.location.href = 'metric-step-1-value';
+          }
+          else if ($('#payment-type-7').is(':checked')) {
+            window.location.href = 'metric-step-1-value';
+          }
+          else if ($('#payment-type-8').is(':checked')) {
+            window.location.href = 'metric-step-1-value';
+          }
+          else if ($('#payment-type-9').is(':checked')) {
+            window.location.href = 'metric-step-1-valuev2';
+          }
+          else if ($('#payment-type-10').is(':checked')) {
+            window.location.href = 'metric-step-1-value';
+          }
+          else if ($('#payment-type-11').is(':checked')) {
+            window.location.href = 'metric-step-1-value';
+          }
+
+  });
+
+  });
+
+  </script>
+
+
+
+
+
+
+
+
+
+
 
 {% endblock %}

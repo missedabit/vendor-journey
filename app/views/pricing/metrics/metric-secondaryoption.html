@@ -11,30 +11,30 @@ Help to Grow: Digital
 
 {% block content %}
 
+
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
 
-        <form class="form" action="/vendor-account-management/product-details/pricing/trial-step-1-answer" method="post">
 
           <div class="govuk-form-group">
             <fieldset class="govuk-fieldset">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                <span class="govuk-caption-l">AccountingSoft Pro: Free trial</span>
+                <span class="govuk-caption-l">AccountingSoft Pro: Pricing metrics step 2</span>
                 <h1 class="govuk-fieldset__heading">
-                  Does [software name] have a free trial?
+                  Do you want to add another secondary pricing metric?
                 </h1>
               </legend>
               <div class="govuk-radios govuk-radios--inline">
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="trial-period-1" name="trial-period" type="radio" value="yes">
-                  <label class="govuk-label govuk-radios__label" for="trial-period-1">
+                  <input class="govuk-radios__input" id="secondary-option-1" name="secondary-option" type="radio" value="yes">
+                  <label class="govuk-label govuk-radios__label" for="secondary-option-1">
                     Yes
                   </label>
                 </div>
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="trial-period-2" name="trial-period" type="radio" value="no">
-                  <label class="govuk-label govuk-radios__label" for="trial-period-2">
+                  <input class="govuk-radios__input" id="secondary-option-2" name="secondary-option" type="radio" value="no">
+                  <label class="govuk-label govuk-radios__label" for="secondary-option-2">
                     No
                   </label>
                 </div>
@@ -44,10 +44,33 @@ Help to Grow: Digital
 
           <button class="govuk-button" data-module="govuk-button">Continue</button>
 
-        </form>
-
 
     </div>
+
+
   </div>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.js"  crossorigin="anonymous"></script>
+
+  <script type="text/javascript">
+
+    $( document ).ready(function() {
+
+      $('.govuk-button').click(function (e) {
+
+          if ($('#secondary-option-1').is(':checked')) {
+            window.location.href = 'metric-step-2';
+          }
+          else if ($('#secondary-option-2').is(':checked')) {
+            window.location.href = 'metric-all-answers';
+          }
+
+  });
+
+  });
+
+  </script>
 
 {% endblock %}

@@ -1,0 +1,57 @@
+{% extends "layout_vendor_account_management.html" %}
+
+{% block pageTitle %}
+Help to Grow: Digital
+{% endblock %}
+
+{% block beforeContent %}
+<img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
+<p><a class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-0" href="#" onclick="history.go(-1); return false;" >Back</a></p>
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+        <form class="form" action="add-discount-terms" method="post">
+
+          <span class="govuk-caption-l">AccountingSoft Pro: Additional discounts</span>
+          <h1 class="govuk-heading-l">How much is the discount? </h1>
+
+
+          <div class="govuk-form-group">
+            <h2 class="govuk-label-wrapper"><label class="govuk-label" for="cost">
+                In pounds
+              </label>
+            </h2>
+            <div class="govuk-input__wrapper">
+              <div class="govuk-input__prefix" aria-hidden="true">£</div>
+              <input class="govuk-input govuk-input--width-5" id="cost" name="cost" type="text" spellcheck="false">
+            </div>
+          </div>
+
+
+          <div class="govuk-form-group">
+            <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label" for="weight">
+                As a percentage
+              </label>
+            </h2>
+            <div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false">
+              <div class="govuk-input__suffix" aria-hidden="true">%</div>
+            </div>
+          </div>
+
+
+
+
+            <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+        </form>
+
+    </div>
+  </div>
+
+{% endblock %}
