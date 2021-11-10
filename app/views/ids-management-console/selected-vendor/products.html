@@ -1,0 +1,60 @@
+{% extends "layout_vendor_account_management.html" %}
+
+{% block pageTitle %}
+  Selected Vendor - Products
+{% endblock %}
+
+{% block beforeContent %}
+  <img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
+  <a class="govuk-link beis-sign-out-link">Sign off</a>
+  <a href="../manage-users/manage-users" class="govuk-link beis-sign-out-link govuk-!-margin-right-2">Manage IDS users</a>
+  <a href="../account-home/account-home" class="govuk-link beis-sign-out-link govuk-!-margin-right-2">Vendor list</a>
+  <br>
+  <a class="govuk-back-link" href="company-details">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <h1 class="govuk-heading-l govuk-!-margin-bottom-5">Account Tech co: 876686 
+      <span class="govuk-caption-l">Products</span>
+    </h1>
+
+  </div>
+</div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Product name</th>
+            <th scope="col" class="govuk-table__header">Status</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><a href="selected-product" class="govuk-link">Ace Account Pro Basic</a></td>
+            <td class="govuk-table__cell">Approved</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><a href="selected-product" class="govuk-link">Ace Account Pro Standard</a></td>
+            <td class="govuk-table__cell">Rejected</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><a href="selected-product" class="govuk-link">Ace Account Pro Extreme</a></td>
+            <td class="govuk-table__cell">Approved</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><a href="selected-product" class="govuk-link">Accountex</a></td>
+            <td class="govuk-table__cell">Approved</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+
+{% endblock %}

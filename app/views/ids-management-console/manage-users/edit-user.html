@@ -1,0 +1,52 @@
+{% extends "layout_vendor_account_management.html" %}
+
+{% block pageTitle %}
+  Edit IDSs user
+{% endblock %}
+
+{% block beforeContent %}
+  <img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
+  <br>
+  <a class="govuk-back-link" href="manage-users">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Edit IDS user
+            </h1>
+          </legend>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="full-name-1">
+              Full name
+            </label>
+            <input class="govuk-input govuk-!-width-three-quarters" id="full-name-1" name="full-name-1" type="text" value="George Mcfly">
+          </div>
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="work-email-1">
+              Work email
+            </label>
+            <input class="govuk-input govuk-!-width-three-quarters" id="work-email-1" name="work-email-1" type="text" value="bruce@email.com">
+          </div>
+        </fieldset>
+      </div>
+
+      <form class="form" action="confirm-remove-user" method="get">
+        <button class="govuk-button govuk-button--secondary" data-module="govuk-button">Remove user</button>
+      </form>
+
+      <form class="form" action="manage-users" method="get">
+        <button class="govuk-button" data-module="govuk-button">Save and close</button>
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

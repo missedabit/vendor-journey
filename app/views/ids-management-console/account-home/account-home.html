@@ -1,0 +1,75 @@
+{% extends "layout_vendor_account_management.html" %}
+
+{% block pageTitle %}
+  Home
+{% endblock %}
+
+{% block beforeContent %}
+  <img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
+  <a class="govuk-link beis-sign-out-link">Sign off</a>
+  <a href="../manage-users/manage-users" class="govuk-link beis-sign-out-link govuk-!-margin-right-2">Manage IDS users</a>
+  <a href="../account-home/account-home" class="govuk-link beis-sign-out-link govuk-!-margin-right-2">Vendor list</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Vendor List</h1>
+     </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Vendor ID</th>
+            <th scope="col" class="govuk-table__header">Name</th>
+            <th scope="col" class="govuk-table__header">Status</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">87686</td>
+            <td class="govuk-table__cell"><a href="../selected-vendor/company-details" class="govuk-link">Account Tech co</a></td>
+            <td class="govuk-table__cell">Eligible</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">76554</td>
+            <td class="govuk-table__cell"><a href="../selected-vendor/company-details" class="govuk-link">AccountMaximus Decimus Meridius</a></td>
+            <td class="govuk-table__cell">Ineligible</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">54358</td>
+            <td class="govuk-table__cell"><a href="../selected-vendor/company-details" class="govuk-link">Power Accounts</a></td>
+            <td class="govuk-table__cell">Eligible</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">26478</td>
+            <td class="govuk-table__cell"><a href="../selected-vendor/company-details" class="govuk-link">Bestsoft ltd</a></td>
+            <td class="govuk-table__cell">Eligible</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">96448</td>
+            <td class="govuk-table__cell"><a href="../selected-vendor/company-details" class="govuk-link">Amazing Apps</a></td>
+            <td class="govuk-table__cell">Eligible</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">47794</td>
+            <td class="govuk-table__cell"><a href="../selected-vendor/company-details" class="govuk-link">Extreme CRM</a></td>
+            <td class="govuk-table__cell">Eligible</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">85478</td>
+            <td class="govuk-table__cell"><a href="../selected-vendor/company-details" class="govuk-link">Ecoms</a></td>
+            <td class="govuk-table__cell">Ineligible</td>
+          </tr>
+
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+
+{% endblock %}

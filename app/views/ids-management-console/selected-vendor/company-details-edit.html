@@ -1,0 +1,209 @@
+{% extends "layout_vendor_account_management.html" %}
+
+{% block pageTitle %}
+  Selected Vendor - Company Details
+{% endblock %}
+
+{% block beforeContent %}
+  <img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
+ 
+  <a class="govuk-link beis-sign-out-link">Sign off</a>
+  <a href="../manage-users/manage-users" class="govuk-link beis-sign-out-link govuk-!-margin-right-2">Manage IDS users</a>
+  <a href="../account-home/account-home" class="govuk-link beis-sign-out-link govuk-!-margin-right-2">Vendor list</a>
+  <br>
+  <a class="govuk-back-link" href="../account-home/account-home">Back</a>
+{% endblock %}
+
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    
+    <h1 class="govuk-heading-l govuk-!-margin-bottom-5">
+      Update company details
+      <span class="govuk-caption-l">Account Tech co: 876686 </span>  
+    </h1>
+
+    <p><a href="products" class="govuk-link">Help to Grow: Digital products</a></p>
+  </div>
+</div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="company">
+          Company name:
+        </label>
+        <input class="govuk-input govuk-input--width-20" id="company" name="company" type="text" value="Account Tech co"></div>
+      
+
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="companyno">
+          Companies House Registration Number:
+        </label>
+        <input class="govuk-input govuk-input--width-20" id="companyno" name="companyno" value="06331310" type="text" spellcheck="false" pattern="[0-9]*" inputmode="numeric">
+      </div>
+
+
+
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend">
+            Companies House Registered Office Address:
+        </legend>
+      
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-visually-hidden" for="address-line-1">
+            Building and street
+          </label>
+          <input class="govuk-input govuk-input--width-20" id="address-line-1" name="address-line-1" type="text" autocomplete="address-line1" value="10 Brock Street, Regent's Place"></div>
+      
+
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-visually-hidden" for="address-town">
+            Town or city
+          </label>
+          <input class="govuk-input govuk-input--width-20" id="address-town" name="address-town" type="text" autocomplete="address-level2" value="London"></div>
+
+      
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-visually-hidden" for="address-postcode">
+            Postcode
+          </label>
+          <input class="govuk-input govuk-input--width-20" id="address-postcode" name="address-postcode" type="text" autocomplete="postal-code" value="NW1 3FG"></div>
+      
+      </fieldset>
+
+
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="url">
+          Company Website URL:
+        </label>
+        <input class="govuk-input govuk-input--width-20" id="url" name="url" type="text" value="calcbook.co.uk"></div>
+
+
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="vendorurl">
+          Vendor notification email:
+        </label>
+        <input class="govuk-input govuk-input--width-20" id="vendorurl" name="vendorurl" type="text" value="VENDOR@EMAIL.COM"></div>
+
+
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="vendorprofile">
+          Vendor company profile:
+        </label>
+        <input class="govuk-input govuk-input--width-20" id="vendorprofile" name="vendorprofile" type="text" value="">
+      </div>
+
+
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="sort">
+          Application status:
+        </label>
+        <select class="govuk-select" id="sort" name="sort">
+          <option value="checked" selected>Company house checked</option>
+          <option value="reviewed">Reviewed</option>
+          <option value="status1">Status1</option>
+          <option value="status2">Status2</option>
+        </select>
+      </div>
+
+
+
+
+
+
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="locked">
+          Locked by:
+        </label>
+        <input class="govuk-input govuk-input--width-20" id="locked" name="locked" type="text" value="Not Available"></div>
+
+
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="code">
+          Encryption code:
+        </label>
+        <input class="govuk-input govuk-input--width-20" id="code" name="code" type="text" value="Not Available"></div>
+
+
+
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="secret">
+          Access secret:
+        </label>
+        <input class="govuk-input govuk-input--width-20" id="secret" name="secret" type="text" value="Not Available"></div>
+
+
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="access">
+          IP access start:
+        </label>
+        <input class="govuk-input govuk-input--width-20" id="access" name="access" type="text" value="Not Available"></div>
+
+
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="accessend">
+          IP access end:
+        </label>
+        <input class="govuk-input govuk-input--width-20" id="accessend" name="accessend" type="text" value="Not Available"></div>
+
+
+
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="log">
+          Edit log:
+        </label>
+        <input class="govuk-input govuk-input--width-20" id="log" name="log" type="text" value=""></div>
+
+
+        <button class="govuk-button govuk-!-margin-bottom-3" data-module="govuk-button">
+          Save updates
+        </button>
+        <p><a class="govuk-link" href="company-details-status">Cancel and return to company details</a></p>
+
+
+    </div>
+  </div>
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.js"  crossorigin="anonymous"></script>
+
+  <script type="text/javascript">
+
+    $(document).ready(function() {
+
+      function updateDetails() {
+        var updated = window.confirm("The company details have been updated.");
+        if (updated) {
+            window.alert("Return to company details");
+            window.location.href = "company-details-status";
+          }
+      };
+
+      $('.govuk-button').click(function (e) {
+        updateDetails();
+      });
+
+    });
+
+  </script>
+
+{% endblock %}

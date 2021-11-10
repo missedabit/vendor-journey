@@ -1,0 +1,70 @@
+{% extends "layout_vendor_account_management.html" %}
+
+{% block pageTitle %}
+  Manage IDS team users
+{% endblock %}
+
+{% block beforeContent %}
+  <img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
+  <br>
+  <a class="govuk-back-link" href="../account-home/account-home">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Manage IDS team users</h1>
+
+     </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Username</th>
+            <th scope="col" class="govuk-table__header">Email</th>
+            <th scope="col" class="govuk-table__header"></th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">George Mcfly</td>
+            <td class="govuk-table__cell">g.mcfly@beis.gov.uk</td>
+            <td class="govuk-table__cell"><a href="edit-user" class="govuk-link">Edit</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Kim Kardashian</td>
+            <td class="govuk-table__cell">k.kardashian@beis.gov.uk</td>
+            <td class="govuk-table__cell"><a href="edit-user" class="govuk-link">Edit</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Travis Barker</td>
+            <td class="govuk-table__cell">t.barker@beis.gov.uk</td>
+            <td class="govuk-table__cell"><a href="edit-user" class="govuk-link">Edit</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Harry Potter</td>
+            <td class="govuk-table__cell">h.potter@beis.gov.uk</td>
+            <td class="govuk-table__cell"><a href="edit-user" class="govuk-link">Edit</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Justin Bieber</td>
+            <td class="govuk-table__cell">i.bieleiber@beis.gov.uk</td>
+            <td class="govuk-table__cell"><a href="edit-user" class="govuk-link">Edit</a></td>
+          </tr>
+
+        </tbody>
+      </table>
+
+      <form class="form" action="add-user" method="get">
+        <button class="govuk-button govuk-button--secondary" data-module="govuk-button">Add user</button>
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
