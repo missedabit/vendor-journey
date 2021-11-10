@@ -1,0 +1,88 @@
+{% extends "layout_vendor_account_management.html" %}
+
+{% block pageTitle %}
+  Account Home
+{% endblock %}
+
+{% block beforeContent %}
+  <img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
+  <a class="govuk-link beis-sign-out-link">Sign out</a>
+  <a href="../static-content/help-and-guidance/vendor-portal-activation" class="govuk-link beis-sign-out-link govuk-!-margin-right-2" target="_blank" rel="noreferrer noopener">Help and guidance</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <h1 class="govuk-heading-l govuk-!-margin-bottom-1">Help to Grow: Digital vendor portal
+      <span class="govuk-caption-l">BestSoft solutions</span>
+    </h1>
+    <div class="govuk-body-s govuk-!-font-weight-bold">Registration number: 75845</div>
+    <p class="govuk-body">You need to provide additional information for every product that has been accepted to the Help to Grow: Digital scheme and IP ranges.</p>
+    <p class="govuk-body">IP ranges and Product information need to be submitted by 15th of November.</p>
+    <ol class="app-task-list">
+      <li>
+        <h2 class="app-task-list__section beis-!-display-inline-block beis-!-width-full">
+          <span class="govuk-grid-column-two-thirds govuk-!-padding-left-0">My products</span>
+          <span class="govuk-grid-column-one-third govuk-!-padding-left-0">Category</span>
+        </h2>
+        <ul class="app-task-list__items">
+          <li class="app-task-list__item">
+              <span class="app-task-list__task-name govuk-grid-column-two-thirds govuk-!-padding-left-0">
+                <a href="../product-details/product-home" class="govuk-link">AccountingSoft Lite</a>
+              </span>
+              <span class="govuk-grid-column-one-third govuk-!-padding-left-0">Accounting</span>
+          </li>
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name govuk-grid-column-two-thirds govuk-!-padding-left-0">
+              <a href="../product-details/product-home" class="govuk-link">AccountingSoft Pro</a>
+            </span>
+            <span class="govuk-grid-column-one-third govuk-!-padding-left-0">Accounting</span>
+          </li>
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name govuk-grid-column-two-thirds govuk-!-padding-left-0">
+              <a href="../product-details/product-home" class="govuk-link">AccountingSoft Enterprise</a>
+            </span>
+            <span class="govuk-grid-column-one-third govuk-!-padding-left-0">Accounting</span>
+          </li>
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name govuk-grid-column-two-thirds govuk-!-padding-left-0">
+              <a href="../product-details/product-home" class="govuk-link">CRMSoft</a>
+            </span>
+            <span class="govuk-grid-column-one-third govuk-!-padding-left-0">CRM</span>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <h2 class="app-task-list__section">
+          My account
+        </h2>
+
+        <ul class="app-task-list__items">
+          <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                Access code: <span class="govuk-!-font-weight-bold">a4db08b7-5729-4ba9-8c08-f2df493465a1</span>
+                <p class="govuk-body-s govuk-!-margin-top-0 govuk-!-margin-bottom-0">This helps with security and authentication between your IT systems and ours.  </p>
+              </span>
+          </li>
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="ip-ranges" class="govuk-link">IP range (required)</a>
+            </span>
+          </li>
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="../manage-users/manage-users" class="govuk-link">Manage users</a>
+            </span>
+          </li>
+        </ul>
+
+      </li>
+    </ol>
+
+  </div>
+</div>
+
+{% endblock %}

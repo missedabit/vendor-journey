@@ -1,0 +1,52 @@
+{% extends "layout_vendor_account_management.html" %}
+
+{% block pageTitle %}
+  IP Range
+{% endblock %}
+
+{% block beforeContent %}
+  <img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
+  <a class="govuk-link beis-sign-out-link">Sign out</a>
+  <a href="../static-content/help-and-guidance/vendor-portal-activation" class="govuk-link beis-sign-out-link govuk-!-margin-right-2" target="_blank" rel="noreferrer noopener">Help and guidance</a>
+  <br>
+  <a class="govuk-back-link" href="account-home">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              IP Range
+            </h1>
+          </legend>
+
+          <p class="govuk-body">This helps us ensure that any updates or requests are really coming from your company.</p>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="ip-range-1">
+              Starting IP
+            </label>
+            <input class="govuk-input govuk-!-width-three-quarters" id="ip-range-1" name="ip-range-1" type="text" value="81.33.164.190">
+          </div>
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="ip-range-2">
+              Ending IP
+            </label>
+            <input class="govuk-input govuk-!-width-three-quarters" id="ip-range-2" name="ip-range-2" type="text" value="81.33.164.200">
+          </div>
+        </fieldset>
+      </div>
+
+      <form class="form" action="account-home" method="get">
+        <button class="govuk-button" data-module="govuk-button">Save and return</button>
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
