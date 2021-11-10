@@ -1,0 +1,53 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Sign In
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+        <div class="govuk-notification-banner__header">
+          <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+            Important
+          </h2>
+        </div>
+        <div class="govuk-notification-banner__content">
+          <p class="govuk-notification-banner__heading">
+            This screen will be hosted outside the application and the styling will be Microsoft AD B2C styling
+          </p>
+        </div>
+      </div>
+
+      <fieldset class="govuk-fieldset">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="email">
+            Email
+          </label>
+          <input class="govuk-input govuk-!-width-three-quarters" id="email" name="email" type="text" value="">
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="password">
+            Password
+          </label>
+          <input class="govuk-input govuk-!-width-three-quarters" id="password" name="password" type="text" value="">
+        </div>
+        <div class="govuk-form-group">
+        <a href="forgot-password" class="govuk-link">Forgot password</a>
+        </div>
+      </fieldset>
+
+
+      <form class="form" action="../account-home/account-home" method="get">
+
+        <button class="govuk-button govuk-button--secondary" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends "layout_vendor_account_management.html" %}
+
+{% block pageTitle %}
+  More users?
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" action="../../more-accounts-answer" method="post">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="more-users-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Do you want to add more users to this account?
+              </h1>
+            </legend>
+            <p class="govuk-body">You can do this later if you need to. All users will be able to add and amend products, see the information we hold on your business and have full access to the portal.  </p>
+            <p class="govuk-body">Add users only if you have their permission.</p>
+
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="more-users" name="more-users" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="more-users">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="more-users-2" name="more-users" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="more-users-2">
+                  No
+                </label>
+              </div>
+            </div>
+
+          </fieldset>
+        </div>
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

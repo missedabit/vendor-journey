@@ -1,0 +1,50 @@
+{% extends "layout_vendor_account_management.html" %}
+
+{% block pageTitle %}
+  Add user
+{% endblock %}
+
+{% block beforeContent %}
+  <img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
+  <a class="govuk-link beis-sign-out-link">Sign out</a>
+  <a href="../static-content/help-and-guidance/vendor-portal-activation" class="govuk-link beis-sign-out-link govuk-!-margin-right-2" target="_blank" rel="noreferrer noopener">Help and guidance</a>
+  <br>
+  <a class="govuk-back-link" href="manage-users">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Add user
+            </h1>
+          </legend>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="full-name-1">
+              Full name
+            </label>
+            <input class="govuk-input govuk-!-width-three-quarters" id="full-name-1" name="full-name-1" type="text" value="Bruce Wayne">
+          </div>
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="work-email-1">
+              Work email
+            </label>
+            <input class="govuk-input govuk-!-width-three-quarters" id="work-email-1" name="work-email-1" type="text" value="bruce@email.com">
+          </div>
+        </fieldset>
+      </div>
+
+      <form class="form" action="manage-users" method="get">
+        <button class="govuk-button" data-module="govuk-button">Confirm</button>
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

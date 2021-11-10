@@ -1,0 +1,57 @@
+{% extends "layout_vendor_account_management.html" %}
+
+{% block pageTitle %}
+  Confirm remove user
+{% endblock %}
+
+{% block beforeContent %}
+  <img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
+  <a class="govuk-link beis-sign-out-link">Sign out</a>
+  <a href="../static-content/help-and-guidance/vendor-portal-activation" class="govuk-link beis-sign-out-link govuk-!-margin-right-2" target="_blank" rel="noreferrer noopener">Help and guidance</a>
+  <br>
+  <a class="govuk-back-link" href="manage-users">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+            <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="confirm-remove-user-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Are you sure that  you want to remove [user name]?
+            </h1>
+          </legend>
+          <p class="govuk-body">They will lose access to the Help to Grow: Digital platform.</p>
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="confirm-remove-user" name="confirm-remove-user" type="radio" value="yes">
+              <label class="govuk-label govuk-radios__label" for="confirm-remove-user">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="confirm-remove-user-2" name="confirm-remove-user" type="radio" value="no">
+              <label class="govuk-label govuk-radios__label" for="confirm-remove-user-2">
+                No
+              </label>
+            </div>
+          </div>
+
+        </fieldset>
+      </div>
+
+      <form action="manage-users" method="get" novalidate>
+
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Confirm
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

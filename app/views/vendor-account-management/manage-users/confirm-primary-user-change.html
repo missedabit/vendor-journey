@@ -1,0 +1,52 @@
+{% extends "layout_vendor_account_management.html" %}
+
+{% block pageTitle %}
+  Confirm primary user change
+{% endblock %}
+
+{% block beforeContent %}
+  <img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
+  <a class="govuk-link beis-sign-out-link">Sign out</a>
+  <a href="../static-content/help-and-guidance/vendor-portal-activation" class="govuk-link beis-sign-out-link govuk-!-margin-right-2" target="_blank" rel="noreferrer noopener">Help and guidance</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="more-users-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Confirm new primary contact
+            </h1>
+          </legend>
+          <p class="govuk-body">[User name] will get all messages and alerts from Help to Grow: Digital.</p>
+          <p class="govuk-body">Select Yes only if you are certain that they are willing to take on this role.</p>
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="primary-user-change" name="primary-user-change" type="radio" value="yes">
+              <label class="govuk-label govuk-radios__label" for="primary-user-change">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="primary-user-change-2" name="primary-user-change" type="radio" value="no">
+              <label class="govuk-label govuk-radios__label" for="primary-user-change-2">
+                No
+              </label>
+            </div>
+          </div>
+
+        </fieldset>
+      </div>
+
+      <form class="form" action="../account-home/account-home" method="get">
+        <button class="govuk-button" data-module="govuk-button">Confirm</button>
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
