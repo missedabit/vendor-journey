@@ -170,10 +170,21 @@
 
 
 
-        <button class="govuk-button govuk-!-margin-bottom-3" data-module="govuk-button">
-          Save updates
-        </button>
+          <button class="govuk-button govuk-!-margin-bottom-3" popup-open="popup-1" href="javascript:void(0)" data-module="govuk-button">
+            Save product updates
+          </button>
         <p><a class="govuk-link" href="selected-product-status">Cancel and return to product details</a></p>
+
+
+        <div class="popup" popup-name="popup-1">
+          <div class="popup-content">
+          <h2>Product details : Account Tech co: 876686</h2>
+          <p>Product detail updates have been saved.</p>
+          <button class="banana govuk-button govuk-!-margin-bottom-3" data-module="govuk-button">
+            Return to product details
+          </button>
+          </div>
+        </div>
 
 
     </div>
@@ -181,27 +192,39 @@
 
 
 
+  <style>
+    body { font-family:Arial, Helvetica, sans-serif; }
+    .popup { position:fixed; top:0px; left:0px; background:rgba(0,0,0,0.75); width:100%; height:100%; display:none; }
+    .popup-content { width: 700px; margin: 0 auto; box-sizing: border-box; padding: 40px; margin-top: 100px; box-shadow: 0px 2px 6px rgba(0,0,0,1); border-radius: 3px; background: #fff; position: relative; }
+    
+    @media screen and (max-width: 720px) {
+    .popup-content { width:90%; }	
+    }
+  </style>
 
   <script src="https://code.jquery.com/jquery-3.6.0.js"  crossorigin="anonymous"></script>
 
-  <script type="text/javascript">
+  <script>
+    $(function() {
+        // Open Popup
+        $('[popup-open]').on('click', function() {
+            var popup_name = $(this).attr('popup-open');
+      $('[popup-name="' + popup_name + '"]').fadeIn(300);
+        });
+    
+        // Close Popup
+        $('[popup-close]').on('click', function() {
+      var popup_name = $(this).attr('popup-close');
+      $('[popup-name="' + popup_name + '"]').fadeOut(300);
+        });
 
-    $(document).ready(function() {
+        $('.banana').click(function (e) {
+          location.href = 'selected-product-status';
 
-      function updateDetails() {
-        var updated = window.confirm("The product details have been updated.");
-        if (updated) {
-            window.alert("Return to product details");
-            window.location.href = "selected-product-status";
-          }
-      };
-
-      $('.govuk-button').click(function (e) {
-        updateDetails();
       });
-
+      
     });
+    </script>
 
-  </script>
 
 {% endblock %}
