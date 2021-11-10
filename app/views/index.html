@@ -1,351 +1,187 @@
+{% extends "layout_vendor_account_management.html" %}
 
-<!DOCTYPE html>
-<html lang="en" class="govuk-template ">
-  <head>
-    <meta charset="utf-8">
-    <title>
-  Software home
-</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <meta name="theme-color" content="#0b0c0c"> 
-    
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+{% block pageTitle %}
+  Help to Grow - Vendor Journey Protoype
+{% endblock %}
 
-    
-      <link rel="shortcut icon" sizes="16x16 32x32 48x48" href="/govuk/assets/images/favicon.ico" type="image/x-icon">
-      <link rel="mask-icon" href="/govuk/assets/images/govuk-mask-icon.svg" color="#0b0c0c"> 
-      <link rel="apple-touch-icon" sizes="180x180" href="/govuk/assets/images/govuk-apple-touch-icon-180x180.png">
-      <link rel="apple-touch-icon" sizes="167x167" href="/govuk/assets/images/govuk-apple-touch-icon-167x167.png">
-      <link rel="apple-touch-icon" sizes="152x152" href="/govuk/assets/images/govuk-apple-touch-icon-152x152.png">
-      <link rel="apple-touch-icon" href="/govuk/assets/images/govuk-apple-touch-icon.png">
-    
-
-    
-  <!--[if lte IE 8]><link href="/public/stylesheets/help-to-grow-ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
-  <!--[if gt IE 8]><!--><link href="/public/stylesheets/help-to-grow.css" media="all" rel="stylesheet" type="text/css" /><!--<![endif]-->
-  
-
-    
-    
-    <meta property="og:image" content="/govuk/assets/images/govuk-opengraph-image.png">
-  </head>
-  <body class="govuk-template__body ">
-    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
-    
-
-    
-      <a href="#main-content" class="govuk-skip-link">Skip to main content</a>
-
-    
-
-    
-  
-  <header class="govuk-header " role="banner" data-module="govuk-header">
-  <div class="govuk-header__container govuk-width-container">
-    <div class="govuk-header__logo">
-      <a href="/" class="govuk-header__link govuk-header__link--homepage">
-        <span class="govuk-header__logotype">
-          <!--[if gt IE 8]><!-->
-          <svg
-            aria-hidden="true"
-            focusable="false"
-            class="govuk-header__logotype-crown"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 132 97"
-            height="30"
-            width="36"
-          >
-            <path
-              fill="currentColor" fill-rule="evenodd"
-              d="M25 30.2c3.5 1.5 7.7-.2 9.1-3.7 1.5-3.6-.2-7.8-3.9-9.2-3.6-1.4-7.6.3-9.1 3.9-1.4 3.5.3 7.5 3.9 9zM9 39.5c3.6 1.5 7.8-.2 9.2-3.7 1.5-3.6-.2-7.8-3.9-9.1-3.6-1.5-7.6.2-9.1 3.8-1.4 3.5.3 7.5 3.8 9zM4.4 57.2c3.5 1.5 7.7-.2 9.1-3.8 1.5-3.6-.2-7.7-3.9-9.1-3.5-1.5-7.6.3-9.1 3.8-1.4 3.5.3 7.6 3.9 9.1zm38.3-21.4c3.5 1.5 7.7-.2 9.1-3.8 1.5-3.6-.2-7.7-3.9-9.1-3.6-1.5-7.6.3-9.1 3.8-1.3 3.6.4 7.7 3.9 9.1zm64.4-5.6c-3.6 1.5-7.8-.2-9.1-3.7-1.5-3.6.2-7.8 3.8-9.2 3.6-1.4 7.7.3 9.2 3.9 1.3 3.5-.4 7.5-3.9 9zm15.9 9.3c-3.6 1.5-7.7-.2-9.1-3.7-1.5-3.6.2-7.8 3.7-9.1 3.6-1.5 7.7.2 9.2 3.8 1.5 3.5-.3 7.5-3.8 9zm4.7 17.7c-3.6 1.5-7.8-.2-9.2-3.8-1.5-3.6.2-7.7 3.9-9.1 3.6-1.5 7.7.3 9.2 3.8 1.3 3.5-.4 7.6-3.9 9.1zM89.3 35.8c-3.6 1.5-7.8-.2-9.2-3.8-1.4-3.6.2-7.7 3.9-9.1 3.6-1.5 7.7.3 9.2 3.8 1.4 3.6-.3 7.7-3.9 9.1zM69.7 17.7l8.9 4.7V9.3l-8.9 2.8c-.2-.3-.5-.6-.9-.9L72.4 0H59.6l3.5 11.2c-.3.3-.6.5-.9.9l-8.8-2.8v13.1l8.8-4.7c.3.3.6.7.9.9l-5 15.4v.1c-.2.8-.4 1.6-.4 2.4 0 4.1 3.1 7.5 7 8.1h.2c.3 0 .7.1 1 .1.4 0 .7 0 1-.1h.2c4-.6 7.1-4.1 7.1-8.1 0-.8-.1-1.7-.4-2.4V34l-5.1-15.4c.4-.2.7-.6 1-.9zM66 92.8c16.9 0 32.8 1.1 47.1 3.2 4-16.9 8.9-26.7 14-33.5l-9.6-3.4c1 4.9 1.1 7.2 0 10.2-1.5-1.4-3-4.3-4.2-8.7L108.6 76c2.8-2 5-3.2 7.5-3.3-4.4 9.4-10 11.9-13.6 11.2-4.3-.8-6.3-4.6-5.6-7.9 1-4.7 5.7-5.9 8-.5 4.3-8.7-3-11.4-7.6-8.8 7.1-7.2 7.9-13.5 2.1-21.1-8 6.1-8.1 12.3-4.5 20.8-4.7-5.4-12.1-2.5-9.5 6.2 3.4-5.2 7.9-2 7.2 3.1-.6 4.3-6.4 7.8-13.5 7.2-10.3-.9-10.9-8-11.2-13.8 2.5-.5 7.1 1.8 11 7.3L80.2 60c-4.1 4.4-8 5.3-12.3 5.4 1.4-4.4 8-11.6 8-11.6H55.5s6.4 7.2 7.9 11.6c-4.2-.1-8-1-12.3-5.4l1.4 16.4c3.9-5.5 8.5-7.7 10.9-7.3-.3 5.8-.9 12.8-11.1 13.8-7.2.6-12.9-2.9-13.5-7.2-.7-5 3.8-8.3 7.1-3.1 2.7-8.7-4.6-11.6-9.4-6.2 3.7-8.5 3.6-14.7-4.6-20.8-5.8 7.6-5 13.9 2.2 21.1-4.7-2.6-11.9.1-7.7 8.8 2.3-5.5 7.1-4.2 8.1.5.7 3.3-1.3 7.1-5.7 7.9-3.5.7-9-1.8-13.5-11.2 2.5.1 4.7 1.3 7.5 3.3l-4.7-15.4c-1.2 4.4-2.7 7.2-4.3 8.7-1.1-3-.9-5.3 0-10.2l-9.5 3.4c5 6.9 9.9 16.7 14 33.5 14.8-2.1 30.8-3.2 47.7-3.2z"
-            ></path>
-          </svg>
-          <!--<![endif]-->
-          <!--[if IE 8]>
-          <img src="/assets/images/govuk-logotype-crown.png" class="govuk-header__logotype-crown-fallback-image" width="36" height="32">
-          <![endif]-->
-          <span class="govuk-header__logotype-text">
-            GOV.UK
-          </span>
-        </span>
-        
-      </a>
-    </div>
-    
-    <div class="govuk-header__content">
-    
-    <a href="/" class="govuk-header__link govuk-header__link--service-name">
-      Help to Grow: Digital
-    </a>
-    
-    
-    </div>
-    
-  </div>
-</header>
-
-
-
-    
-      <div class="govuk-width-container ">
-        
-  <img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
-  <a class="govuk-link beis-sign-out-link">Sign out</a>
-  <a href="../static-content/help-and-guidance" class="govuk-link beis-sign-out-link govuk-!-margin-right-2" target="_blank" rel="noreferrer noopener">Help and guidance</a>
-  <br>
-  <a class="govuk-back-link" href="../account-home/account-home">Back</a>
-
-        <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
-          
+{% block content %}
 
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-      <strong class="govuk-tag govuk-tag--grey beis-!-float-right govuk-!-margin-top-1">In Review</strong>
-      <h1 class="govuk-heading-l govuk-!-margin-bottom-0">
-        AccountingSoft Pro
-        <span class="govuk-caption-l">Accounting</span>
-      </h1>
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-l">
+        Vendor Journey Prototypes
+        <span class="govuk-caption-xl">{{releaseVersion}}</span>
+      </h1>{{releaseVersion | log }}
+      <p  class="govuk-body">Click on the links below to navigate to the prototype pages</p>
 
-      <ol class="app-task-list">
+      <h2 class="govuk-heading-m">Vendor Account Management Console</h2>
 
+      <h3 class="govuk-heading-s">Activate Account</h3>
+      <ul class="govuk-list govuk-list--bullet">
         <li>
-          <h2 class="app-task-list__section">
-            Voucher redemption link (required)
-          </h2>
-          <ul class="app-task-list__items">
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <ul class="govuk-list">
-                  <li>We need this so that customers can link to your website to redeem their tokens.</li>
-                </ul>
-                <a href="redemption-url">
-                  Create redemption URL
-                </a>
-              </span>
-            </li>
-          </ul>
+          <a href="vendor-account-management/activate-account/company-details" class="govuk-link">Check Company Details</a>
         </li>
-
-
         <li>
-          <h2 class="app-task-list__section">
-            Pricing information
-          </h2>
-          <ul class="app-task-list__items">
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <ul class="govuk-list">
-                  <li>We need this so that customers understand the pricing structure, commitments, free trials, discounts and any additional costs</li>
-                </ul>
-                <a href="pricing/pricing-url">
-                  Your pricing
-                </a>
-              </span>
-            </li>
-          </ul>
+          <a href="vendor-account-management/activate-account/terms-and-conditions" class="govuk-link">Ts&Cs and Privacy Consent</a>
         </li>
-
-
-
-
-
-        <h2 class="app-task-list__section">
-            SKU ID (required)
-          </h2>
-          <ul class="app-task-list__items">
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <ul class="govuk-list">
-                  <li>We need this to help track your product sales using Help to Grow: Digital Tokens.</li>
-                </ul>
-                <a href="sku-id">
-                  Add SKU ID
-                </a>
-              </span>
-            </li>
-          </ul>
-        </li>
-
         <li>
-          <h2 class="app-task-list__section">
-            Optional product logo
-          </h2>
-          <ul class="app-task-list__items">
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <ul class="govuk-list">
-                  <li>This will appear on your product page – it will help users identify your product and brand. You do not have to add a logo</li>
-                </ul>
-                <a href="product-logo">
-                  Add a product logo
-                </a>
-              </span>
-            </li>
-          </ul>
+          <a href="vendor-account-management/activate-account/create-account" class="govuk-link">Create Account</a>
         </li>
+      </ul>
 
-         <li>
 
-      </ol>
-
-      <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-5 govuk-!-margin-bottom-5">
-
-      <p class="govuk-body">You need to fill in the sections marked Not complete by Nov 15th. You can then submit this product for review.</p>
-
-      <div class="govuk-warning-text">
-        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-        <strong class="govuk-warning-text__text">
-          <span class="govuk-warning-text__assistive">Warning</span>
-          The information you enter and approve in these screens will be published on the web. Do not include anything that you want to keep private. 
-        </strong>
-      </div>
-
-      <ol class="app-task-list">
+      <h3 class="govuk-heading-s">Login</h3>
+      <ul class="govuk-list govuk-list--bullet">
         <li>
-          <h2 class="app-task-list__section">
-            Product information
-          </h2>
-          <ul class="app-task-list__items">
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="product-summary">
-                  Product summary
-                </a>
-              </span>
-              <strong class="govuk-tag app-task-list__tag">Complete</strong>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="product-capabilities">
-                  Product capabilities
-                </a>
-              </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag">Not complete</strong>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="product-support">
-                  Product support details
-                </a>
-              </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag">Not complete</strong>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="product-deployment">
-                  Deployment platform, compatibility and reviews
-                </a>
-              </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag">Not complete</strong>
-            </li>
-          </ul>
+          <a href="vendor-account-management/login/landing-page" class="govuk-link">Landing page</a>
+        </li>
+        <li>
+          <a href="vendor-account-management/login/sign-in" class="govuk-link">Sign in</a>
+        </li>
+        <li>
+          <a href="vendor-account-management/login/forgot-password" class="govuk-link">Forgot password</a>
+        </li>
+        <li>
+          <a href="vendor-account-management/login/set-password" class="govuk-link">Set new password</a>
+        </li>
+      </ul>
+
+      <h3 class="govuk-heading-s">Account Home</h3>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          <a href="vendor-account-management/account-home/account-home" class="govuk-link">My Account</a>
+        </li>
+        <li>
+          <a href="vendor-account-management/account-home/ip-ranges" class="govuk-link">IP Ranges</a>
+        </li>
+      </ul>
+
+      <h3 class="govuk-heading-s">Software Details</h3>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          <a href="vendor-account-management/product-details/product-home" class="govuk-link">Software home</a>
+        </li>
+        <li>
+          <a href="vendor-account-management/product-details/redemption-url" class="govuk-link">Redemption URL</a>
+        </li>
+        <li>
+          <a href="vendor-account-management/product-details/sku-id" class="govuk-link">SKU ID</a>
+        </li>
+        <li>
+          <a href="vendor-account-management/product-details/product-logo" class="govuk-link">Product logo</a>
+        </li>
+        <li>
+          <a href="vendor-account-management/product-details/product-summary" class="govuk-link">Product summary</a>
+        </li>
+        <li>
+          <a href="vendor-account-management/product-details/product-capabilities" class="govuk-link">Product capabilities</a>
+        </li>
+        <li>
+          <a href="vendor-account-management/product-details/product-support" class="govuk-link">Product support details</a>
+        </li>
+        <li>
+          <a href="vendor-account-management/product-details/product-deployment" class="govuk-link">Deployment platform, compatibility and reviews</a>
+        </li>
+      </ul>
+
+      <h3 class="govuk-heading-s">Software Details (Post MVP)</h3>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          <a href="vendor-account-management/product-details/product-pricing" class="govuk-link">Product pricing details</a>
         </li>
 
+      </ul>
+
+      <h3 class="govuk-heading-s">Submit Changes</h3>
+      <ul class="govuk-list govuk-list--bullet">
         <li>
-          <h2 class="app-task-list__section">
-            Submit
-          </h2>
-          <ul class="app-task-list__items">
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="../submit/review-details">
-                  Review and submit product information
-                </a>
-              </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag">Cannot start yet</strong>
-            </li>
-          </ul>
+          <a href="vendor-account-management/submit/review-details" class="govuk-link">Your product changes</a>
         </li>
-      </ol>
+        <li>
+          <a href="vendor-account-management/submit/confirmation" class="govuk-link">Confirmation</a>
+        </li>
+      </ul>
+
+      <h3 class="govuk-heading-s">Manage users</h3>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          <a href="vendor-account-management/manage-users/more-users" class="govuk-link">More users?</a>
+        </li>
+        <li>
+          <a href="vendor-account-management/manage-users/manage-users" class="govuk-link">Manage users home</a>
+        </li>
+        <li>
+          <a href="vendor-account-management/manage-users/add-user" class="govuk-link">Add user</a>
+        </li>
+        <li>
+          <a href="vendor-account-management/manage-users/edit-user" class="govuk-link">Edit user</a>
+        </li>
+        <li>
+          <a href="vendor-account-management/manage-users/confirm-remove-user" class="govuk-link">Confirm remove user</a>
+        </li>
+        <li>
+          <a href="vendor-account-management/manage-users/confirm-primary-user-change" class="govuk-link">Confirm primary user change</a>
+        </li>
+      </ul>
+
+      <h3 class="govuk-heading-s">Static content</h3>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          <a href="vendor-account-management/static-content/privacy-notice" class="govuk-link">Privacy notice</a>
+        </li>
+        <li>
+          <a href="vendor-account-management/static-content/terms-of-use" class="govuk-link">Terms of use</a>
+        </li>
+        <li>
+          <a href="vendor-account-management/static-content/cookies" class="govuk-link">Cookies notice</a>
+        </li>
+        <li>
+          <a href="vendor-account-management/static-content/accessibility-statement" class="govuk-link">Accessibility statement</a>
+        </li>
+        <li>
+          <a href="vendor-account-management/static-content/help-and-guidance/vendor-portal-activation" class="govuk-link">Help and guidance</a>
+        </li>
+      </ul>
+
+      <h2 class="govuk-heading-m">IDS Team Management Console</h2>
+
+      <h3 class="govuk-heading-s">Account home</h3>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          <a href="ids-management-console/account-home/account-home" class="govuk-link">Home</a>
+        </li>
+      </ul>
+
+      <h3 class="govuk-heading-s">Selected vendor</h3>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          <a href="ids-management-console/selected-vendor/company-details" class="govuk-link">Selected vendor - Company Details</a>
+        </li>
+        <li>
+          <a href="ids-management-console/selected-vendor/products" class="govuk-link">Selected vendor - Products</a>
+        </li>
+        <li>
+          <a href="ids-management-console/selected-vendor/selected-product" class="govuk-link">Selected vendor - Selected Products</a>
+        </li>
+      </ul>
+
+      <h3 class="govuk-heading-s">Manage users</h3>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          <a href="ids-management-console/manage-users/manage-users" class="govuk-link">Manage users home</a>
+        </li>
+        <li>
+          <a href="ids-management-console/manage-users/edit-user" class="govuk-link">Edit user</a>
+        </li>
+        <li>
+          <a href="ids-management-console/manage-users/add-user" class="govuk-link">Add user</a>
+        </li>
+        <li>
+          <a href="ids-management-console/manage-users/confirm-remove-user" class="govuk-link">Confirm remove user</a>
+        </li>
+      </ul>
 
     </div>
   </div>
 
-
-        </main>
-      </div>
-    
-
-    
-    <footer class="govuk-footer " role="contentinfo">
-  <div class="govuk-width-container ">
-    
-    <div class="govuk-footer__meta">
-      <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
-        
-          <h2 class="govuk-visually-hidden">Support links</h2>
-          
-            <ul class="govuk-footer__inline-list">
-              
-                <li class="govuk-footer__inline-list-item">
-                  <a class="govuk-footer__link" href="https://govuk-prototype-kit.herokuapp.com/">
-                    GOV.UK Prototype Kit v9.14.1
-                  </a>
-                </li>
-              
-                <li class="govuk-footer__inline-list-item">
-                  <a class="govuk-footer__link" href="/prototype-admin/clear-data">
-                    Clear data
-                  </a>
-                </li>
-              
-            </ul>
-          
-          
-        
-        <svg
-          aria-hidden="true"
-          focusable="false"
-          class="govuk-footer__licence-logo"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 483.2 195.7"
-          height="17"
-          width="41"
-        >
-          <path
-            fill="currentColor"
-            d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
-          />
-        </svg>
-        <span class="govuk-footer__licence-description">
-          All content is available under the
-          <a
-            class="govuk-footer__link"
-            href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
-            rel="license"
-          >Open Government Licence v3.0</a>, except where otherwise stated
-        </span>
-      </div>
-      <div class="govuk-footer__meta-item">
-        <a
-          class="govuk-footer__link govuk-footer__copyright-logo"
-          href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
-        >© Crown copyright</a>
-      </div>
-    </div>
-  </div>
-</footer>
-
-  
-
-    
-  
-    <!-- Javascript -->
-<script src="/public/javascripts/jquery-1.11.3.js"></script>
-
-
-  <script src="/extension-assets/govuk-frontend/govuk/all.js"></script>
-
-
-<script src="/public/javascripts/application.js"></script>
-
-
-  <script src="/public/javascripts/auto-store-data.js"></script>
-
-
-    
-  
-  <!-- GOV.UK Prototype Kit v9.14.1 -->
-
-  </body>
-</html>
+{% endblock %}
