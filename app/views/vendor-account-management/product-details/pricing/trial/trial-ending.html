@@ -1,0 +1,54 @@
+{% extends "layout_vendor_account_management.html" %}
+
+{% block pageTitle %}
+Help to Grow: Digital
+{% endblock %}
+
+{% block beforeContent %}
+<img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
+<p><a class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-0" href="#" onclick="history.go(-1); return false;" >Back</a></p>
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+        <form class="form" action="trial-all-answers" method="post">
+
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                    <span class="govuk-caption-l">AccountingSoft Pro: Free trial</span>
+                    <h1 class="govuk-fieldset__heading">
+                        What happens after the free trial? 
+                    </h1>
+                  </legend>
+                  <div class="govuk-radios govuk-radios--inline">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="trial-ending-1" name="trial-ending" type="radio" value="There is automatic billing">
+                      <label class="govuk-label govuk-radios__label" for="trial-ending-1">
+                        There is automatic billing
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="trial-ending-2" name="trial-ending" type="radio" value="The customer is asked to enter payment information">
+                      <label class="govuk-label govuk-radios__label" for="trial-ending-2">
+                        The customer is asked to enter payment information
+                      </label>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+
+          <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+        </form>
+
+
+    </div>
+  </div>
+
+{% endblock %}

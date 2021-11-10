@@ -1,0 +1,50 @@
+{% extends "layout_vendor_account_management.html" %}
+
+{% block pageTitle %}
+  Redemption URL
+{% endblock %}
+
+{% block beforeContent %}
+  <img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
+  <a class="govuk-link beis-sign-out-link">Sign out</a>
+  <a href="../static-content/help-and-guidance/vendor-portal-activation" class="govuk-link beis-sign-out-link govuk-!-margin-right-2" target="_blank" rel="noreferrer noopener">Help and guidance</a>
+  <br>
+  <a class="govuk-back-link" href="product-home">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="govuk-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading govuk-!-margin-bottom-5">
+              Voucher redemption link
+              <span class="govuk-caption-l">AccountingSoft Pro</span>
+            </h1>
+          </legend>
+          <div id="redemption-url-hint" class="govuk-hint">
+            We need this so that customers can redeem their Help to Grow: Digital tokens at your website. <a href="../static-content/help-and-guidance/technical-solutions" class="govuk-link">Redemption URL tech guidance.</a>
+          </div>
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="redemption-url">
+              Product redemption URL
+            </label>
+            <input class="govuk-input govuk-!-width-three-quarters" id="redemption-url" name="redemption-url" type="text" value="www.redemption-address.co.uk">
+          </div>
+<!--
+          <div class="govuk-!-margin-top-3"><button class="govuk-button govuk-button--secondary" data-module="govuk-button">Check URL</button></div>
+-->
+        </fieldset>
+      </div>
+
+      <form class="form" action="product-home" method="get">
+        <button class="govuk-button" data-module="govuk-button">Save and return</button>
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

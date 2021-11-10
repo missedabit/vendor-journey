@@ -1,0 +1,59 @@
+{% extends "layout_vendor_account_management.html" %}
+
+{% block pageTitle %}
+Help to Grow: Digital
+{% endblock %}
+
+{% block beforeContent %}
+<img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
+<p><a class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-0" href="#" onclick="history.go(-1); return false;" >Back</a></p>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <span class="govuk-caption-l">AccountingSoft Pro</span>
+
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--l">Product prices</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Price title</th>
+            <th scope="col" class="govuk-table__header">Voucher URL</th>
+            <th scope="col" class="govuk-table__header">SKU ID</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Lorem ipsum Lorem ipsum Lorem ipsum </td>
+            <td class="govuk-table__cell"><a href="#">Lorem ipsum Lorem ipsum Lorem ipsum</a></td>
+            <td class="govuk-table__cell">Lorem ipsum Lorem ipsum Lorem ipsum</td>
+          </tr>          
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Lorem ipsum Lorem ipsum Lorem ipsum </td>
+            <td class="govuk-table__cell"><a href="#">Lorem ipsum Lorem ipsum Lorem ipsum</a></td>
+            <td class="govuk-table__cell">Lorem ipsum Lorem ipsum Lorem ipsum</td>
+          </tr>          
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Lorem ipsum Lorem ipsum Lorem ipsum </td>
+            <td class="govuk-table__cell"><a href="#">Lorem ipsum Lorem ipsum Lorem ipsum</a></td>
+            <td class="govuk-table__cell">Lorem ipsum Lorem ipsum Lorem ipsum</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <a href="pricing-url-summary-list">
+      <button class="govuk-button" data-module="govuk-button">
+        Continue to pricing breakdown
+      </button></a>
+
+
+
+
+
+    </div>
+  </div>
+
+{% endblock %}

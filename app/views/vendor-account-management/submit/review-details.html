@@ -1,0 +1,70 @@
+{% extends "layout_vendor_account_management.html" %}
+
+{% block pageTitle %}
+  Review details to submit
+{% endblock %}
+
+{% block beforeContent %}
+  <img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
+  <a class="govuk-link beis-sign-out-link">Sign out</a>
+  <a href="../static-content/help-and-guidance/vendor-portal-activation" class="govuk-link beis-sign-out-link govuk-!-margin-right-2" target="_blank" rel="noreferrer noopener">Help and guidance</a>
+  <br>
+  <a class="govuk-back-link" href="../product-details/product-home">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <h1 class="govuk-heading-l">Review and submit product
+      <span class="govuk-caption-l">AccountSoft Pro</span>
+      </h1>
+      
+      <table class="govuk-table">
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Product Summary</th>
+            <td class="govuk-table__cell">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</td>
+            <td class="govuk-table__cell"><a href="#" class="govuk-link">Change</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Product logo</th>
+            <td class="govuk-table__cell"><img src="https://via.placeholder.com/100x100.png?Placeholder+logo" alt="Image alt text" class="govuk-!-margin-top-3 govuk-!-margin-bottom-3"></td>
+            <td class="govuk-table__cell"><a href="#" class="govuk-link">Change</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Redemption URL</th>
+            <td class="govuk-table__cell">www.redemption-address.co.uk</td>
+            <td class="govuk-table__cell"><a href="#" class="govuk-link">Change</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Product capabilities</th>
+            <td class="govuk-table__cell">
+              <ul class="govuk-list">
+                <li>Financial Reporting and Analysis</li>
+                <li>Revenue Management</li>
+                <li>Contract Accounting</li>
+                <li>Revenue Recognition</li>
+              </ul>
+            </td>
+            <td class="govuk-table__cell"><a href="#" class="govuk-link">Change</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p class="govuk-body">Your product details will be reviewed before the product goes live on the Help to Grow: Digital website.</p>
+      <p class="govuk-body">All the information you have provided will then be publicly available once the Help to Grow: Digital scheme is live.</p>
+
+      <form action="confirmation" method="get" novalidate>
+
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Submit
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

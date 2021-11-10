@@ -1,0 +1,28 @@
+{% extends "layout_vendor_account_management.html" %}
+
+{% block pageTitle %}
+  Help and guidance
+{% endblock %}
+
+{% block beforeContent %}
+  <img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-quarter">
+      {% include './includes/help-and-guidance-navigation.html' %}
+    </div>
+    
+    <div class="govuk-grid-column-three-quarters">
+      <h1 class="govuk-heading-l">Help and guidance</h1>
+
+      <section id="contact">
+        <h2 class="govuk-heading-m">Contact us</h2>
+        <p class="govuk-body">Contact <a href="mailto:vendors.helptogrow@beis.co.uk" class="govuk-link">vendors.helptogrow@beis.co.uk</a> for help with the Help to Grow:Digital vendor portal.</p>
+      </section>
+    </div>
+  </div>
+
+{% endblock %}

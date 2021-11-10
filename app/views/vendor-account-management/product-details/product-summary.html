@@ -1,0 +1,57 @@
+{% extends "layout_vendor_account_management.html" %}
+
+{% block pageTitle %}
+  Product summary
+{% endblock %}
+
+{% block beforeContent %}
+  <img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
+  <a class="govuk-link beis-sign-out-link">Sign out</a>
+  <a href="../static-content/help-and-guidance/vendor-portal-activation" class="govuk-link beis-sign-out-link govuk-!-margin-right-2" target="_blank" rel="noreferrer noopener">Help and guidance</a>
+  <br>
+  <a class="govuk-back-link" href="product-home">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="product-summary-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading govuk-!-margin-bottom-5">
+              Product summary
+              <span class="govuk-caption-l">AccountingSoft Pro</span>
+            </h1>
+          </legend>
+          <p class="govuk-body">Use this summary to describe:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>what your product does and who it's aimed at</li>
+            <li>key business benefits – why should a business consider it?</li>
+            <li>what makes it stand out from the crowd</li>
+            <li>don't add a list of specific product features: you can do this in the next screen.</li>
+          </ul>
+          <p class="govuk-body">Keep your summary factual and objective, and do not make any claims that you can't back up. </p>
+
+          <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="5000">
+            <div class="govuk-form-group">
+              <textarea class="govuk-textarea govuk-js-character-count govuk-!-width-three-quarters" id="product-summary" name="product-summary" rows="10" aria-describedby="with-hint-info with-hint-hint"></textarea>
+            </div>
+
+            <div id="product-summary-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+              You can enter up to 5000 characters
+            </div>
+          </div>
+
+        </fieldset>
+      </div>
+
+      <form class="form" action="product-home" method="get">
+        <button class="govuk-button" data-module="govuk-button">Save and return</button>
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

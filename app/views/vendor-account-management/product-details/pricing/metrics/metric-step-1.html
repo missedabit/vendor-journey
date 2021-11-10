@@ -1,0 +1,182 @@
+{% extends "layout_vendor_account_management.html" %}
+
+{% block pageTitle %}
+Help to Grow: Digital
+{% endblock %}
+
+{% block beforeContent %}
+<img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
+<p><a class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-0" href="#" onclick="history.go(-1); return false;" >Back</a></p>
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <span class="govuk-caption-l">AccountingSoft Pro: Pricing metrics step 1</span>
+                <h1 class="govuk-fieldset__heading">
+                  How do customers pay for AccountingSoft Pro?
+                </h1>
+              </legend>
+
+              <div class="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="payment-type-1" name="payment-type" type="radio" value="payment1">
+                  <label class="govuk-label govuk-radios__label" for="payment-type-1">
+                    One time payment - unlimited users (perpetual)
+                  </label>
+                </div>
+
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="payment-type-2" name="payment-type" type="radio" value="payment2">
+                  <label class="govuk-label govuk-radios__label" for="payment-type-2">
+                    One time payment plus annual support
+                  </label>
+                </div>
+
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="payment-type-3" name="payment-type" type="radio" value="payment3">
+                  <label class="govuk-label govuk-radios__label" for="payment-type-3">
+                    One time payment - fixed number of users
+                  </label>
+                </div>
+
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="payment-type-4" name="payment-type" type="radio" value="payment4">
+                  <label class="govuk-label govuk-radios__label" for="payment-type-4">
+                    Annual support - fixed number of users
+                  </label>
+                </div>
+
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="payment-type-5" name="payment-type" type="radio" value="payment5">
+                  <label class="govuk-label govuk-radios__label" for="payment-type-5">
+                    One time cost per additional user
+                  </label>
+                </div>
+
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="payment-type-6" name="payment-type" type="radio" value="payment6">
+                  <label class="govuk-label govuk-radios__label" for="payment-type-6">
+                   One time cost per user (concurrent)
+                  </label>
+                </div>
+
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="payment-type-7" name="payment-type" type="radio" value="payment7">
+                  <label class="govuk-label govuk-radios__label" for="payment-type-7">
+                    Cost per user per month
+                  </label>
+                </div>
+
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="payment-type-8" name="payment-type" type="radio" value="payment8">
+                  <label class="govuk-label govuk-radios__label" for="payment-type-8">
+                    Unlimited users per month
+                  </label>
+                </div>
+
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="payment-type-9" name="payment-type" type="radio" value="payment9">
+                  <label class="govuk-label govuk-radios__label" for="payment-type-9">
+                    Fixed number of users per month
+                  </label>
+                </div>
+
+
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="payment-type-10" name="payment-type" type="radio" value="payment10">
+                  <label class="govuk-label govuk-radios__label" for="payment-type-10">
+                    Monthly platform
+                  </label>
+                </div>
+
+
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="payment-type-11" name="payment-type" type="radio" value="monthly">
+                  <label class="govuk-label govuk-radios__label" for="payment-type-11">
+                    Additional user per month
+                  </label>
+                </div>
+
+              </div>
+            </fieldset>
+          </div>
+
+          <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+
+
+    </div>
+  </div>
+
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.js"  crossorigin="anonymous"></script>
+
+  <script type="text/javascript">
+
+    $( document ).ready(function() {
+
+      $('.govuk-button').click(function (e) {
+
+          if ($('#payment-type-1').is(':checked')) {
+            window.location.href = 'metric-step-1-value';
+          }
+          else if ($('#payment-type-2').is(':checked')) {
+            window.location.href = 'metric-step-1-valuev1';
+          }
+          else if ($('#payment-type-3').is(':checked')) {
+            window.location.href = 'metric-step-1-valuev2';
+          }
+          else if ($('#payment-type-4').is(':checked')) {
+            window.location.href = 'metric-step-1-valuev2';
+          }
+          else if ($('#payment-type-5').is(':checked')) {
+            window.location.href = 'metric-step-1-value';
+          }
+          else if ($('#payment-type-6').is(':checked')) {
+            window.location.href = 'metric-step-1-value';
+          }
+          else if ($('#payment-type-7').is(':checked')) {
+            window.location.href = 'metric-step-1-value';
+          }
+          else if ($('#payment-type-8').is(':checked')) {
+            window.location.href = 'metric-step-1-value';
+          }
+          else if ($('#payment-type-9').is(':checked')) {
+            window.location.href = 'metric-step-1-valuev2';
+          }
+          else if ($('#payment-type-10').is(':checked')) {
+            window.location.href = 'metric-step-1-value';
+          }
+          else if ($('#payment-type-11').is(':checked')) {
+            window.location.href = 'metric-step-1-value';
+          }
+
+  });
+
+  });
+
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

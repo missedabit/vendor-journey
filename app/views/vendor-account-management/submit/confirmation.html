@@ -1,0 +1,46 @@
+{% extends "layout_vendor_account_management.html" %}
+
+{% block pageTitle %}
+  Submit confirmation
+{% endblock %}
+
+{% block beforeContent %}
+  <img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
+  <a class="govuk-link beis-sign-out-link">Sign out</a>
+  <a href="../static-content/help-and-guidance/vendor-portal-activation" class="govuk-link beis-sign-out-link govuk-!-margin-right-2" target="_blank" rel="noreferrer noopener">Help and guidance</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-panel govuk-panel--confirmation">
+        <h1 class="govuk-panel__title">The product details for {software name} have been submitted</h1>
+        <div class="govuk-panel__body">
+
+        </div>
+      </div>
+
+      <p class="govuk-body">
+        We have sent you a confirmation email for your records.</strong>
+      </p>
+
+      <h2 class="govuk-heading-m">What happens next</h2>
+
+      <p class="govuk-body">
+        We will review the information you have sent us. We will contact you to let you know if everything is OK, or if we need more details from you.
+      </p>
+      <p class="govuk-body">
+          You cannot make any changes to the product information, until we have reviewed your answers.
+      </p>
+      <form action="../account-home/account-home" method="get" novalidate>
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Home
+        </button>
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

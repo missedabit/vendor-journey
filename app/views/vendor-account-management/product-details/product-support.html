@@ -1,0 +1,188 @@
+{% extends "layout_vendor_account_management.html" %}
+
+{% block pageTitle %}
+  Product support / Training
+{% endblock %}
+
+{% block beforeContent %}
+  <img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
+  <a class="govuk-link beis-sign-out-link">Sign out</a>
+  <a href="../static-content/help-and-guidance/vendor-portal-activation" class="govuk-link beis-sign-out-link govuk-!-margin-right-2" target="_blank" rel="noreferrer noopener">Help and guidance</a>
+  <br>
+  <a class="govuk-back-link" href="product-home">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="product-support-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading govuk-!-margin-bottom-5">
+              Free product support
+              <span class="govuk-caption-l">AccountingSoft Pro</span>
+            </h1>
+          </legend>
+
+          <p class="govuk-body">Select support and training options only if they are included in the cost of the product.</p>
+
+          <h2 class="govuk-label">Support</h2>
+
+          <div class="govuk-form-group">
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="support-1" name="support-1" type="checkbox">
+                <label class="govuk-label govuk-checkboxes__label" for="support-1">
+                  Email
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="govuk-form-group">
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="support-2" name="support-2" type="checkbox">
+                <label class="govuk-label govuk-checkboxes__label" for="support-2">
+                  Phone support
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="govuk-form-group">
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="support-3" name="support-3" type="checkbox">
+                <label class="govuk-label govuk-checkboxes__label" for="support-3">
+                  Chat
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="govuk-form-group">
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="support-4" name="support-4" type="checkbox">
+                <label class="govuk-label govuk-checkboxes__label" for="support-4">
+                  Web form
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="govuk-form-group">
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="support-5" name="support-5" type="checkbox">
+                <label class="govuk-label govuk-checkboxes__label" for="support-5">
+                  Social media
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="govuk-form-group">
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="support-6" name="support-6" type="checkbox">
+                <label class="govuk-label govuk-checkboxes__label" for="support-6">
+                  Forum
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="govuk-form-group">
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="support-7" name="support-7" type="checkbox">
+                <label class="govuk-label govuk-checkboxes__label" for="support-7">
+                  FAQs
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="govuk-form-group">
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="support-8" name="support-8" type="checkbox">
+                <label class="govuk-label govuk-checkboxes__label" for="support-8">
+                  Knowledge base
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <h2 class="govuk-label">Training</h2>
+
+          <div class="govuk-form-group">
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="training-1" name="training-1" type="checkbox">
+                <label class="govuk-label govuk-checkboxes__label" for="training-1">
+                  In person
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="govuk-form-group">
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="training-2" name="training-2" type="checkbox">
+                <label class="govuk-label govuk-checkboxes__label" for="training-2">
+                  Live online
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="govuk-form-group">
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="training-3" name="training-3" type="checkbox">
+                <label class="govuk-label govuk-checkboxes__label" for="training-3">
+                  Webinars
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="govuk-form-group">
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="training-4" name="training-4" type="checkbox">
+                <label class="govuk-label govuk-checkboxes__label" for="training-4">
+                  Documentation
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="govuk-form-group">
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="training-5" name="training-5" type="checkbox">
+                <label class="govuk-label govuk-checkboxes__label" for="training-5">
+                  Videos
+                </label>
+              </div>
+            </div>
+          </div>
+   
+        </fieldset>
+      </div>
+
+      <form class="form" action="product-home" method="get">
+        <button class="govuk-button" data-module="govuk-button">Save and return</button>
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

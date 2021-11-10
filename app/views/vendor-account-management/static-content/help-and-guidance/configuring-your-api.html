@@ -1,0 +1,36 @@
+{% extends "layout_vendor_account_management.html" %}
+
+{% block pageTitle %}
+  Help and guidance
+{% endblock %}
+
+{% block beforeContent %}
+  <img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-quarter">
+        {% include './includes/help-and-guidance-navigation.html' %}
+    </div>
+    
+    <div class="govuk-grid-column-three-quarters">
+      <h1 class="govuk-heading-l">Help and guidance</h1>
+
+      <section id="section-configuring-your-api">
+        <h2 class="govuk-heading-m">Phase 2: Configuring your API</h2>
+        <p class="govuk-body">Once you receive the Swagger documentation, your developer can start to configure the three APIs. Please find key dates below:</p>
+        <ol class="govuk-list govuk-list--bullet">
+          <li><span class="govuk-!-font-weight-bold">w/c 11 October:</span> API specs and Swagger documentation will be sent to you in the Vendor Developer Documentation.</li>
+          <li><span class="govuk-!-font-weight-bold">Between 18 October – 5 November:</span> We will hold a roundtable session for all vendors, in which we will present API specifications for the scheme and have a Q&A slot. The session should be attended by the appropriate technical personnel from your organisation.</li>
+          <li><span class="govuk-!-font-weight-bold">w/c 18 October:</span> The Vendor Portal will go-live, and you will be required to register your user account. At this point, developer documentation, stub URLs, access code and IP ranges will also be available.</li>
+          <li><span class="govuk-!-font-weight-bold">w/c 8 November:</span> Live end-points will be made available by the HtG:D Digital team to start beta testing.</li>
+          <li><span class="govuk-!-font-weight-bold">Between 9 – 15 November:</span> You may be selected to join a session with our Digital team for private beta testing.</li>
+          <li><span class="govuk-!-font-weight-bold">15 November:</span> Deadline to submit products ahead of scheme launch.</li>
+        </ol>
+      </section>
+    </div>
+  </div>
+
+{% endblock %}

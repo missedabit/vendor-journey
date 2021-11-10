@@ -1,0 +1,34 @@
+{% extends "layout_vendor_account_management.html" %}
+
+{% block pageTitle %}
+  Help and guidance
+{% endblock %}
+
+{% block beforeContent %}
+  <img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-quarter">
+        {% include './includes/help-and-guidance-navigation.html' %}
+    </div>
+    
+    <div class="govuk-grid-column-three-quarters">
+      <h1 class="govuk-heading-l">Help and guidance</h1>
+
+      <section id="section-product-comparison-tool">
+        <h2 class="govuk-heading-m">Product comparison tool</h2>
+        <p class="govuk-body">All of the above information that you will provide will feed into the creation of our Product Comparison Tool for SMEs. As part of our offer to SMEs, our digital platform will display products in a comparable form which will be drawn from the information you provide in the product information collection. The online tool for SMEs will look to include:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>Licencing structures and pricing, including information on free trial periods and discount periods.</li>
+          <li>Core and advanced functionality and features.</li>
+          <li>SME support, including training offer and post-purchase implementation support.</li>
+          <li>Publicly available customer ratings.</li>
+        </ul>
+      </section>
+    </div>
+  </div>
+
+{% endblock %}

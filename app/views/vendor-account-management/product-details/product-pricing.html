@@ -1,0 +1,137 @@
+{% extends "layout_vendor_account_management.html" %}
+
+{% block pageTitle %}
+  Pricing details
+{% endblock %}
+
+{% block beforeContent %}
+  <img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
+  <a class="govuk-link beis-sign-out-link">Sign out</a>
+  <a href="../static-content/help-and-guidance/vendor-portal-activation" class="govuk-link beis-sign-out-link govuk-!-margin-right-2" target="_blank" rel="noreferrer noopener">Help and guidance</a>
+  <br>
+  <a class="govuk-back-link" href="product-home">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="product-pricing-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading govuk-!-margin-bottom-5">
+              Product pricing details
+              <span class="govuk-caption-l">AccountingSoft Pro</span>
+            </h1>
+          </legend>
+
+
+          <div class="govuk-form-group">
+
+            <label class="govuk-label" for="free-trial-period">
+              Free trial period
+            </label>
+
+            <div class="govuk-radios govuk-radios--conditional govuk-radios--inline" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="free-trial-period-yes" name="free-trial-period" type="radio" value="free-trial-period-1" data-aria-controls="conditional-free-trial-period">
+                <label class="govuk-label govuk-radios__label" for="free-trial-period-yes">
+                  Yes
+                </label>
+              </div>
+
+              <div class="govuk-radios govuk-radios--inline govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-free-trial-period">
+
+                <label class="govuk-label" for="free-trial-period">
+                  Payment details needed before free trial?
+                </label>
+
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="free-trial-period-payment-yes" name="free-trial-payment-period" type="radio" value="free-trial-period-payment-1">
+                  <label class="govuk-label govuk-radios__label" for="free-trial-period-payment-yes">
+                    Yes
+                  </label>
+                </div>
+
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="free-trial-period-payment-no" name="free-trial-payment-period" type="radio" value="email">
+                  <label class="govuk-label govuk-radios__label" for="free-trial-period-payment-no">
+                    No
+                  </label>
+                </div>
+              
+              </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="free-trial-period-no" name="free-trial-period" type="radio" value="email">
+                <label class="govuk-label govuk-radios__label" for="free-trial-period-no">
+                  No
+                </label>
+              </div>
+          </div>
+
+          <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-5 govuk-!-margin-bottom-5">
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="base-cost-one-off">
+              Base cost - One off purchase  (if applicable)
+            </label>
+            <input class="govuk-input govuk-!-width-one-quarter" id="base-cost-one-off" name="base-cost-one-off" type="text">
+          </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="per-users-one-off">
+              Per number of users/seats
+            </label>
+            <input class="govuk-input govuk-!-width-one-quarter" id="per-users-one-off" name="per-users-one-off" type="text">
+          </div>
+
+          <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-5">
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="base-cost-subscription">
+              Base cost - Subscription
+            </label>
+            <input class="govuk-input govuk-!-width-one-quarter" id="base-cost-subscription" name="base-cost-subscription" type="text">
+          </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="per-users-subscription">
+              Per number of users/seats
+            </label>
+            <input class="govuk-input govuk-!-width-one-quarter" id="per-users-subscription" name="per-users-subscription" type="text">
+          </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="contract-term">
+              Contract term
+            </label>
+            <select class="govuk-select govuk-!-width-one-quarter" id="contract-term" name="contract-term">
+              <option value="12m">12 months</option>
+            </select>
+          </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="discount-period">
+              Discount period
+            </label>
+            <select class="govuk-select govuk-!-width-one-quarter" id="discount-period" name="discount-period">
+              <option value="3m">3 months</option>
+            </select>
+          </div>
+
+          <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-5">
+
+        </fieldset>
+      </div>
+
+
+      <form class="form" action="product-home" method="get">
+        <button class="govuk-button" data-module="govuk-button">Save and return</button>
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

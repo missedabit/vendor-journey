@@ -1,0 +1,43 @@
+{% extends "layout_vendor_account_management.html" %}
+
+{% block pageTitle %}
+Help to Grow: Digital
+{% endblock %}
+
+{% block beforeContent %}
+<img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
+<p><a class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-0" href="#" onclick="history.go(-1); return false;" >Back</a></p>
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+        <form class="form" action="commitment-all-answers" method="post">
+
+            <span class="govuk-caption-l">AccountingSoft Pro: Minimum commitment period</span>
+            <div class="govuk-form-group">
+              <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="event-name">
+                  How long is the commitment period?
+                </label>
+              </h1>
+              <label class="govuk-label" for="commitment period">
+                Commitment period
+              </label>
+              <div class="govuk-input__wrapper">
+              <input class="govuk-input govuk-input--width-2" id="annual-period" name="annual-period" type="text">
+              <div class="govuk-input__suffix" aria-hidden="true">years</div>
+              </div>
+            </div>
+
+            <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+        </form>
+
+    </div>
+  </div>
+
+{% endblock %}

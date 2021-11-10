@@ -1,0 +1,220 @@
+{% extends "layout_vendor_account_management.html" %}
+
+{% block pageTitle %}
+  Platform & systems
+{% endblock %}
+
+{% block beforeContent %}
+  <img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
+  <a class="govuk-link beis-sign-out-link">Sign out</a>
+  <a href="../static-content/help-and-guidance/vendor-portal-activation" class="govuk-link beis-sign-out-link govuk-!-margin-right-2" target="_blank" rel="noreferrer noopener">Help and guidance</a>
+  <br>
+  <a class="govuk-back-link" href="product-home">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="product-details-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading govuk-!-margin-bottom-5">
+              Deployment platform, compatibility and reviews
+              <span class="govuk-caption-l">AccountingSoft Pro</span>
+            </h1>
+          </legend>
+
+          <h2 class="govuk-label" for="deployment-platform">
+            Deployment platforms
+          </h2>
+          <div class="govuk-hint">Select all that apply</div>
+
+          <div class="govuk-form-group">
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="deployment-platform-1" name="deployment-platform-1" type="checkbox">
+                <label class="govuk-label govuk-checkboxes__label" for="deployment-platform-1">
+                  Vendor Cloud/SaaS - multi-tenant (public)
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="govuk-form-group">
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="deployment-platform-2" name="deployment-platform-2" type="checkbox">
+                <label class="govuk-label govuk-checkboxes__label" for="deployment-platform-2">
+                  Vendor Cloud/SaaS - single-tenant (private)
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="govuk-form-group">
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="deployment-platform-3" name="deployment-platform-3" type="checkbox">
+                <label class="govuk-label govuk-checkboxes__label" for="deployment-platform-3">
+                  Supported browser - Edge
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="govuk-form-group">
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="deployment-platform-4" name="deployment-platform-4" type="checkbox">
+                <label class="govuk-label govuk-checkboxes__label" for="deployment-platform-4">
+                  Supported browser - Chrome
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="govuk-form-group">
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="deployment-platform-5" name="deployment-platform-5" type="checkbox">
+                <label class="govuk-label govuk-checkboxes__label" for="deployment-platform-5">
+                  Supported browser - Safari
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="govuk-form-group">
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="deployment-platform-6" name="deployment-platform-6" type="checkbox">
+                <label class="govuk-label govuk-checkboxes__label" for="deployment-platform-6">
+                  Supported browser - Firefox
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="govuk-form-group">
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="deployment-platform-7" name="deployment-platform-7" type="checkbox">
+                <label class="govuk-label govuk-checkboxes__label" for="deployment-platform-7">
+                  Desktop deployment - Windows
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="govuk-form-group">
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="deployment-platform-8" name="deployment-platform-8" type="checkbox">
+                <label class="govuk-label govuk-checkboxes__label" for="deployment-platform-8">
+                  Desktop deployment - Mac
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="govuk-form-group">
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="deployment-platform-9" name="deployment-platform-9" type="checkbox">
+                <label class="govuk-label govuk-checkboxes__label" for="deployment-platform-9">
+                  Desktop deployment - Virtual Desktop support
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="govuk-form-group">
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="deployment-platform-10" name="deployment-platform-10" type="checkbox">
+                <label class="govuk-label govuk-checkboxes__label" for="deployment-platform-10">
+                  Server-based / private cloud - Windows
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="govuk-form-group">
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="deployment-platform-11" name="deployment-platform-11" type="checkbox">
+                <label class="govuk-label govuk-checkboxes__label" for="deployment-platform-11">
+                  Server-based / private cloud - Linux
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="govuk-form-group">
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="deployment-platform-12" name="deployment-platform-12" type="checkbox">
+                <label class="govuk-label govuk-checkboxes__label" for="deployment-platform-12">
+                  Server-based / private cloud - Unix
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="govuk-form-group">
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="deployment-platform-13" name="deployment-platform-13" type="checkbox">
+                <label class="govuk-label govuk-checkboxes__label" for="deployment-platform-13">
+                  Mobile - Android
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="govuk-form-group">
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="deployment-platform-14" name="deployment-platform-14" type="checkbox">
+                <label class="govuk-label govuk-checkboxes__label" for="deployment-platform-14">
+                  Mobile - iOS-iPhone
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="1000">
+            <div class="govuk-form-group">
+              <h2 class="govuk-label" for="compatibility-other-systems">Compatibility with other systems</h2>
+              <div id="compatibility-other-systems-hint" class="govuk-hint">
+                Tell us how your product accelerates integration with other vendor solutions. For example: connectors; open API; marketplace apps (ISP/ISV).
+              </div>
+              <textarea class="govuk-textarea govuk-js-character-count govuk-!-width-three-quarters" id="compatibility-other-systems" name="compatibility-other-systems" rows="10" aria-describedby="with-hint-info with-hint-hint"></textarea>
+            </div>
+
+            <div id="compatibility-other-systems-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+              You can enter up to 1000 characters
+            </div>
+          </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="capterra-url">
+              Review link
+            </label>
+            <div class="govuk-hint">This review can be from Capterra, G2, Getapp, Software Suggests, Trust Radius or Finance Online</div>
+            <input class="govuk-input govuk-!-width-three-quarters" id="capterra-url" name="capterra-url" type="text" value="https://www.capterra.com/p/122008/FreeAgent/reviews/">
+          </div>
+
+        </fieldset>
+      </div>
+
+      <form class="form" action="product-home" method="get">
+        <button class="govuk-button" data-module="govuk-button">Save and return</button>
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

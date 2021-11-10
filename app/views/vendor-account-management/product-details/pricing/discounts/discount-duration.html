@@ -1,0 +1,61 @@
+{% extends "layout_vendor_account_management.html" %}
+
+{% block pageTitle %}
+Help to Grow: Digital
+{% endblock %}
+
+{% block beforeContent %}
+<img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
+<p><a class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-0" href="#" onclick="history.go(-1); return false;" >Back</a></p>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+        <form class="form" action="discount-value" method="post">
+
+            <span class="govuk-caption-l">AccountingSoft Pro: Discount period</span>
+
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" role="group" aria-describedby="discount-issued-hint">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                    <h1 class="govuk-fieldset__heading">
+                      How long is the discount period?
+                    </h1>
+                  </legend>
+
+                  <div class="govuk-date-input" id="discount-issued">
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="discount-issued-day">
+                          Days
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-5" id="discount-issued-day" name="discount-issued-day" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                    </div>
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="discount-issued-month">
+                          Months
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-5" id="discount-issued-month" name="discount-issued-month" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                    </div>
+
+                  </div>
+
+                </fieldset>
+              </div>
+
+
+              <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+        </form>
+
+
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,186 @@
+{% extends "layout_vendor_account_management.html" %}
+
+{% block pageTitle %}
+  Software home
+{% endblock %}
+
+{% block beforeContent %}
+  <img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
+  <a class="govuk-link beis-sign-out-link">Sign out</a>
+  <a href="../static-content/help-and-guidance/vendor-portal-activation" class="govuk-link beis-sign-out-link govuk-!-margin-right-2" target="_blank" rel="noreferrer noopener">Help and guidance</a>
+  <br>
+  <a class="govuk-back-link" href="../account-home/account-home">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <strong class="govuk-tag govuk-tag--grey beis-!-float-right govuk-!-margin-top-1">In Review</strong>
+      <h1 class="govuk-heading-l govuk-!-margin-bottom-0">
+        AccountingSoft Pro
+        <span class="govuk-caption-l">Accounting</span>
+      </h1>
+
+      <ol class="app-task-list">
+
+        <li>
+          <h2 class="app-task-list__section">
+            Voucher redemption link (required)
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <div class="app-task-list__task-name">
+                <ul class="govuk-list">
+                  <li>We need this so that customers can link to your website to redeem their tokens.</li>
+                </ul>
+                <a href="redemption-url">
+                  Create redemption URL
+                </a>
+              </div>
+            </li>
+          </ul>
+        </li>
+
+
+
+
+        <li>
+          <h2 class="app-task-list__section">
+            Pricing information (required)
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <ul class="govuk-list">
+                  <li>We need to know this so that customers understand the pricing structure, commitments, free trials, discounts and any additional costs.</li>
+                </ul>
+                <!-- <p class="govuk-body">
+                <a href="pricing/pricing-url">
+                  Add pricing information
+                </a>
+                </p> -->
+                <p class="govuk-body">
+                <a href="pricing/pricing-url-summary">
+                  View pricing information
+                </a>
+                </p>
+              </span>
+            </li>
+          </ul>
+        </li>
+
+
+        <li>
+        <h2 class="app-task-list__section">
+            SKU ID (required)
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <div class="app-task-list__task-name">
+                <ul class="govuk-list">
+                  <li>We need this to help track your product sales using Help to Grow: Digital Tokens.</li>
+                </ul>
+                <a href="sku-id">
+                  Add SKU ID
+                </a>
+              </div>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <h2 class="app-task-list__section">
+            Product logo (optional)
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <div class="app-task-list__task-name">
+                <ul class="govuk-list">
+                  <li>This will appear on your product page – it will help users identify your product and brand. You do not have to add a logo</li>
+                </ul>
+                <a href="product-logo">
+                  Add a product logo
+                </a>
+              </div>
+            </li>
+          </ul>
+        </li>
+
+         <li>
+
+      </ol>
+
+
+      <p class="govuk-body">You need to fill in the sections marked Not complete by Nov 15th.</p>
+
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive">Warning</span>
+          The information you enter and approve in these screens will be published on the web. Do not include anything that you want to keep private. 
+        </strong>
+      </div>
+
+      <ol class="app-task-list">
+        <li>
+          <h2 class="app-task-list__section">
+            Product information
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <div class="app-task-list__task-name">
+                <a href="product-summary">
+                  Product summary
+                </a>
+              </div>
+              <strong class="govuk-tag app-task-list__tag">Complete</strong>
+            </li>
+            <li class="app-task-list__item">
+              <div class="app-task-list__task-name">
+                <a href="product-capabilities">
+                  Product capabilities
+                </a>
+              </div>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag">Not complete</strong>
+            </li>
+            <li class="app-task-list__item">
+              <div class="app-task-list__task-name">
+                <a href="product-support">
+                  Product support details
+                </a>
+              </div>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag">Not complete</strong>
+            </li>
+            <li class="app-task-list__item">
+              <div class="app-task-list__task-name">
+                <a href="product-deployment">
+                  Deployment platform, compatibility and reviews
+                </a>
+              </div>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag">Not complete</strong>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <h2 class="app-task-list__section">
+            Review and submit
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="../submit/review-details">
+                  Review and submit product information
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag">Cannot start yet</strong>
+            </li>
+          </ul>
+        </li>
+      </ol>
+
+    </div>
+  </div>
+
+{% endblock %}

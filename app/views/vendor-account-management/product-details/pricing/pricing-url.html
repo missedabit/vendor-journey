@@ -1,0 +1,95 @@
+{% extends "layout_vendor_account_management.html" %}
+
+{% block pageTitle %}
+Help to Grow: Digital
+{% endblock %}
+
+{% block beforeContent %}
+<img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
+<p><a class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-0" href="../product-home">Back</a></p>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+          <span class="govuk-caption-l">AccountingSoft Pro</span>
+        Add pricing information
+      </h1>
+
+
+      <ol class="app-task-list">
+        <li>
+          <p class="govuk-body govuk-!-margin-bottom-7">You have completed 1 of 6 sections.</p>
+
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="metrics/metric-step-1" aria-describedby="company-information-status">
+                  1. Pricing metrics
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="company-information-status">Not started</strong>
+            </li>
+
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="commitment/commitment-step-1" aria-describedby="company-information-status">
+                 2. Minimum commitment period
+                </a>
+              </span>
+              <strong class="govuk-tag app-task-list__tag" id="company-information-status">Completed</strong>
+            </li>
+
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="trial/trial-step-1" aria-describedby="company-information-status">
+                 3. Free trial
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="contact-details-status">In progress</strong>
+            </li>
+
+
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="discounts/discount-step-1" aria-describedby="company-information-status">
+                  4. Discount period
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="company-information-status">Not started</strong>
+            </li>
+
+
+
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="additionaldiscounts/add-discount-step-1" aria-describedby="company-information-status">
+                  5. Additional discounts
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="company-information-status">Not started</strong>
+            </li>
+
+
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+              <a href="additional/additional-step-1" aria-describedby="company-information-status">
+               6. Additional costs
+              </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="">Cannot start yet</strong>
+            </li>
+
+          </ul>
+        </li>
+
+      </ol>
+
+
+    </div>
+  </div>
+
+{% endblock %}
