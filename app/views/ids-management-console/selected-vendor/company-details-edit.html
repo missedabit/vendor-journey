@@ -180,11 +180,13 @@
 
           <div class="popup" popup-name="popup-1">
               <div class="popup-content">
-              <h2>Company details : Account Tech co: 876686</h2>
-              <p>Company updates have been saved.</p>
-              <button class="banana govuk-button govuk-!-margin-bottom-3" data-module="govuk-button">
-                Return to company details
-              </button>
+                <h2>Company details : Account Tech co: 876686</h2>
+                <p>Company details have been updated.</p><br><br>
+                  <button class="return govuk-button govuk-!-margin-bottom-3 govuk-!-margin-right-9" data-module="govuk-button">
+                    Return to company details
+                  </button>
+                  <br>
+                  <a class="close govuk-body govuk-link" href="">Close</a>
               </div>
           </div>
 
@@ -221,9 +223,12 @@
       $('[popup-name="' + popup_name + '"]').fadeOut(300);
         });
 
-        $('.banana').click(function (e) {
+        $('.return').click(function (e) {
           location.href = 'company-details-status';
+      });
 
+      $('.close').click(function (e) {
+          location.href = 'company-details-edit';
       });
       
     });
